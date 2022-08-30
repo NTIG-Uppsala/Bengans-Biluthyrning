@@ -13,7 +13,7 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@v2
             - name: ✔ HTML5 Validator
-              uses: NTIG-Uppsala/html5validator-action
+              uses: NTIG-Uppsala/html5validator-action  #fucked as fuck, fix (version not working)
               with:
                 root: src/
                 css: true
@@ -45,7 +45,7 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@v2
             - name: Deploy website 🚀
-              uses: NTIG-Uppsala/html5validator-action@
+              uses: NTIG-Uppsala/html5validator-action   #fucked as fuck, fix (version not working)
               with:
                 folder: src # The folder the action should deploy.
     test_availability:
