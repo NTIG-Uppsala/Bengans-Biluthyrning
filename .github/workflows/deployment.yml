@@ -13,7 +13,7 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@v2
             - name: ✔ HTML5 Validator
-              uses: https://github.com/NTIG-Uppsala/html5validator-action@<latest version>
+              uses: NTIG-Uppsala/html5validator-action@<latest version>
               with:
                 root: src/
                 css: true
