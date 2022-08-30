@@ -9,18 +9,16 @@ on:
 jobs:
     validate_code:
         runs-on: ubuntu-latest
-
         steps:
             - name: Checkout Repo
               uses: actions/checkout@v2
             - name: ✔ HTML5 Validator
-              uses: linus-jansson/html5validator-action@v7.1.1
+              uses: NTIG-Uppsala/html5validator-action@v7.1.1
               with:
                 root: src/
                 css: true
     run_tests:
         runs-on: ubuntu-latest
-
         steps:
             - name: Checkout Repo
               uses: actions/checkout@v2
@@ -43,15 +41,13 @@ jobs:
           contents: write
         needs: [ validate_code, run_tests ]
         runs-on: ubuntu-latest
-
         steps:
             - name: Checkout Repo
               uses: actions/checkout@v2
             - name: Deploy website 🚀
-              uses: linus-jansson/github-pages-deploy-action@v4
+              uses: NTIG-Uppsala/html5validator-action@v7.1.1
               with:
                 folder: src # The folder the action should deploy.
-
     test_availability:
         needs: [ deploy ]
         runs-on: ubuntu-latest
