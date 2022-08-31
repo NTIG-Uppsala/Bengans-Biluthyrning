@@ -9,18 +9,27 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.utils import ChromeType
+from selenium.webdriver.common.by import By
 
-class TestTest2():
-  def setup_method(self, method):
-    self.driver = webdriver.Chrome()
-    self.vars = {}
-  
-  def teardown_method(self, method):
-    self.driver.quit()
-  
-  def test_test2(self):
-    self.driver.get("https://nikole-scheutz.github.io/")
-    self.driver.set_window_size(1296, 1440)
-    elements = self.driver.find_elements(By.CSS_SELECTOR, "h2")
-    assert len(elements) > 0
+class CheckSiteAvailability(unittest.TestCase):
 
+	class initialize_browser():
+		def setup_method(self, method):
+			self.driver = webdriver.Chrome()
+			self.vars = {}
+
+		def teardown_method(self, method):
+			self.driver.quit()
+
+	class test_test2():
+		def test_test2(self):
+			self.driver.get("https://nikole-scheutz.githuukhjkhkb.io/")
+			self.driver.set_window_size(1296, 1440)
+			elements = self.driver.find_elements(By.CSS_SELECTOR, "h2")
+			assert len(elements) > 0
+
+if __name__ == '__main__':      #runs all code in the test
+    unittest.main(verbosity=69)  #how much info to be output to terminal
