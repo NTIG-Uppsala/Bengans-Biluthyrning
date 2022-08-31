@@ -26,7 +26,7 @@ class CheckSiteAvailability(unittest.TestCase):
 
 	class test_test2():
 		def test_test2(self):
-			self.driver.get("https://nikole-scheutz.githuukhjkhkb.io/")
+			self.driver.get("https://nikole-scheutz.github.io/")
 			self.driver.set_window_size(1296, 1440)
 			elements = self.driver.find_elements(By.CSS_SELECTOR, "h2")
 			assert len(elements) > 0
