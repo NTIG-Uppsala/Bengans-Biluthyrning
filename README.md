@@ -3,6 +3,9 @@ Hemsida åt Bengans Biluthyrning - 1/4 Finsk
 
 
 Development Environment:
-Google Chrome (Chromium-based duger inte)
+Visual Studio Code
+Google Chrome
 Python
 Pip
+
+Python requirements shown in tests_requirements.txt, to install run `pip install -r ./tests/tests_requirements.txt`
