@@ -20,7 +20,7 @@ class CheckSiteAvailability(unittest.TestCase):
         self.browser = webdriver.Chrome(driver_path, options=chrome_options) # Initializes chrome driver from the local instance of chrome
         self.addCleanup(self.browser.quit) # close the browser when the tests are done
 
-        self.website_url = "https://ntig-uppsala.github.io/bengans-biluthyrning/" # url to be used
+        self.website_url = "https://nikole-scheutz.github.io/" # url to be used
         # self.website_url = "http://127.0.0.1:5500/src/" # url that will be used
 
     def test_page_title(self):
