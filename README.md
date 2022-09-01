@@ -1,6 +1,6 @@
 # Bengans-Biluthyrning
 Hemsida åt Bengans Biluthyrning - 1/4 Finsk 
-## [Link to live website](https://ntig-uppsala.github.io/Bengans-Biluthyrning/src/index.html)
+## [Link to live website](https://ntig-uppsala.github.io/Bengans-Biluthyrning/)
 
 Development Environment:
 Visual Studio Code
