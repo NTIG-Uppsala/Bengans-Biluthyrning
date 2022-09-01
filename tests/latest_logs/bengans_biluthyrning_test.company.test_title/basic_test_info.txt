@@ -1,0 +1,27 @@
+bengans_biluthyrning_test.py::company::test_title
+--------------------------------------------------------------------
+Last Page: https://ntig-uppsala.github.io/Bengans-Biluthyrning/
+  Browser: chrome (104.0.5112.102)
+   Driver: chromedriver (104.0.5112.79)
+Timestamp: 1662018491  (Unix Timestamp)
+     Date: Thursday, 1 September 2022
+     Time: 9:48:11 AM  (Västeuropa, sommartid, UTC+01:00)
+--------------------------------------------------------------------
+Traceback: File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.1776.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.1776.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 549, in _callTestMethod
+    method()
+  File "C:\Users\axel.schnurer\Documents\GitHub\Bengans-Biluthyrning\tests\bengans_biluthyrning_test.py", line 12, in test_title
+    self.assert_title("Bengans Biluthyrning")
+  File "C:\Users\axel.schnurer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\base_case.py", line 6316, in assert_title
+    self.assertEqual(expected, actual, error % (expected, actual))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.1776.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.1776.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 1226, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.1776.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 675, in fail
+    raise self.failureException(msg)
+Exception: 'Bengans Biluthyrning' != 'Document'
+- Bengans Biluthyrning
++ Document
+ : Expected page title [Bengans Biluthyrning] does not match the actual title [Document]!
