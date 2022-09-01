@@ -1,14 +1,12 @@
-from seleniumbase import BaseCase
+from seleniumbase import BaseCase  #importing testing framework
 import os
 
-startPage = "https://ntig-uppsala.github.io/Bengans-Biluthyrning/"
+startPage = "https://ntig-uppsala.github.io/Bengans-Biluthyrning/"  #website url
 
 class company(BaseCase):
-    def test_start(self):
-        self.open(startPage)
-        self.assert_text("Bengans Biluthyrning", "body")
+    def test_text(self):   #defining first test
+        self.open(startPage) #opens the page in browser
+        self.assert_text("Bengans Biluthyrning", "body")    #checks for "Bengans Biluthyrning" in body
     def test_title(self):
         self.open(startPage)
-        self.assert_title("Bengans Biluthyrning")
-
-#Loop function instead of creating multiple
+        self.assert_title("Bengans Biluthyrning")   #checks for "Bengans Biluthyrning" in title
