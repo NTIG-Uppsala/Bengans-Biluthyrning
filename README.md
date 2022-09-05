@@ -4,11 +4,11 @@ Hemsida åt Bengans Biluthyrning - 1/4 Finsk
 
 # Development Environment:
 ## Visual Studio Code
-    - Live Preview https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server
+- Live Preview https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server
 ## Google Chrome
 ## Python
-    - Pip
-    - Python requirements shown in [tests_requirements.txt](tests/tests_requirements.txt), to install run `pip install -r ./tests/tests_requirements.txt`
+- Pip
+- Python requirements shown in [tests_requirements.txt](tests/tests_requirements.txt), to install run `pip install -r ./tests/tests_requirements.txt`
 
 # Code Validation:
 
@@ -43,9 +43,9 @@ camelCase (ex: testVariableOne)
 ## Comment conventions: 
 
 programming language default:
-HTML:	&lt;!--[text here]--&gt;
-CSS:	/\*[text here]\*/
-Python:	#[text here]
+- HTML:	&lt;!--[text here]--&gt;
+- CSS:	/\*[text here]\*/
+- Python:	#[text here]
 
 
 # Definition of Done
