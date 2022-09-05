@@ -1,7 +1,8 @@
 from seleniumbase import BaseCase  #importing testing framework
 import os
+import pathlib
 
-start_page = "https://ntig-uppsala.github.io/Bengans-Biluthyrning/"  #website url
+start_page = "file:///" + str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/") + "index.html" #website url
 
 class company(BaseCase):
     def test_text(self):   #defining first test
