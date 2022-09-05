@@ -43,9 +43,9 @@ camelCase (ex: testVariableOne)
 ## Comment conventions: 
 
 programming language default:
-- HTML:	    &lt;!--[text here]--&gt;
-- CSS:	    /\*[text here]\*/
-- Python:	#[text here]
+- HTML:&nbsp;&nbsp;&nbsp;&lt;!--[text here]--&gt;
+- CSS:&nbsp;&nbsp;&nbsp;&nbsp;/\*[text here]\*/
+- Python:&nbsp;#[text here]
 
 
 # Definition of Done
