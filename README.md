@@ -44,7 +44,7 @@ camelCase (ex: testVariableOne)
 
 programming language default:
 - HTML:&nbsp;&nbsp;&nbsp;&lt;!--[text here]--&gt;
-- CSS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\*[text here]\*/
+- CSS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\*[text here]\*/
 - Python:&nbsp;#[text here]
 
 
