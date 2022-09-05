@@ -2,10 +2,19 @@
 Hemsida åt Bengans Biluthyrning - 1/4 Finsk 
 ## [Link to live website](https://ntig-uppsala.github.io/Bengans-Biluthyrning/)
 
+# Programming Languages
+
+This project uses
+- HTML/CSS
+- Python
+
 # Development Environment:
 ## Visual Studio Code
 - [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+
 ## Google Chrome
+Google Chrome is used during testing. 
+
 ## Python
 - Pip
 - Python requirements shown in [tests_requirements.txt](tests/tests_requirements.txt), to install run `pip install -r ./tests/tests_requirements.txt`
@@ -19,12 +28,6 @@ w3's online markup validation service is used for code validation.
 # Testing
 
 Tests use the [seleniumbase](https://seleniumbase.io/) library.
-
-# Programming Languages
-
-This project uses
-- HTML/CSS
-- Python
 
 # Coding Standard
 
@@ -44,7 +47,7 @@ camelCase (ex: testVariableOne)
 
 programming language default:
 - HTML:&nbsp;&nbsp;&nbsp;&lt;!--[text here]--&gt;
-- CSS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\*[text here]\*/
+- CSS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\*[text here]\*/
 - Python:&nbsp;#[text here]
 
 
