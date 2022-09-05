@@ -4,7 +4,7 @@ Hemsida åt Bengans Biluthyrning - 1/4 Finsk
 
 # Development Environment:
 ## Visual Studio Code
-- Live Preview https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server
+- [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
 ## Google Chrome
 ## Python
 - Pip
@@ -43,8 +43,8 @@ camelCase (ex: testVariableOne)
 ## Comment conventions: 
 
 programming language default:
-- HTML:	&lt;!--[text here]--&gt;
-- CSS:	/\*[text here]\*/
+- HTML:	    &lt;!--[text here]--&gt;
+- CSS:	    /\*[text here]\*/
 - Python:	#[text here]
 
 
