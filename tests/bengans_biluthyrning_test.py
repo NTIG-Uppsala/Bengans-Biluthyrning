@@ -3,7 +3,10 @@ import pathlib
 
 startPage = "file:///" + str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/") + "index.html" #website url
 
-# listList = ["Random bullshit", "random stuff"]
+basicInfoTexts = ["Fjällgatan 32H, 981 39 Jönköping", "Vardagar: 10-16", "Lördagar: 12-15", "Söndagar: Stängt", "0630-555-555", "info@<DOMÄN>"]
+
+socialMedia = ["#facebook", "#twitter", "#instagram"]
+socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/ntiuppsala", "https://www.instagram.com/ntiuppsala/"]
 
 class workingWebsite(BaseCase):
     def testText(self):   #defining first test
@@ -16,23 +19,15 @@ class workingWebsite(BaseCase):
 class basicInformation(BaseCase):
     def testContactInfo(self):   
         self.open(startPage)
-        self.assert_text("Adress", "body")
-        self.assert_text("Öpettider", "body")
-        self.assert_text("Telefonnummer", "body")
-        self.assert_text("Mail", "body")
+        for i in basicInfoTexts:
+            self.assert_text(i, "body")
     def testIcons(self):
-        self.open(startPage)
-        self.is_element_present("#twitter", by="css selector")
-        self.click("#twitter", by="css selector", timeout=None, delay=0, scroll=True)
-        self.get_current_url()
-        self.open(startPage)
-        self.is_element_present("#facebook", by="css selector")
-        self.click("#facebook", by="css selector", timeout=None, delay=0, scroll=True)
-        self.get_current_url()
-        self.open(startPage)
-        self.is_element_present("#instagram", by="css selector")
-        self.click("#instagram", by="css selector", timeout=None, delay=0, scroll=True)
-        self.get_current_url()
+        for i in range(len(socialMedia)):
+            self.open(startPage)
+            self.is_element_present(socialMedia[i], "body")
+            self.click(socialMedia[i], "body", timeout=None, delay=0, scroll=True)
+            if(self.get_current_url() != socialLinks[i]):
+                raise NameError(f"Failed at {socialMedia[i]}")
 
 class imagesProducts(BaseCase):
     def testText(self):  

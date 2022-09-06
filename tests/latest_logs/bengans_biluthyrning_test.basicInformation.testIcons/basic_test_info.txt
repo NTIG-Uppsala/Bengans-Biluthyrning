@@ -1,23 +1,23 @@
 bengans_biluthyrning_test.py::basicInformation::testIcons
 --------------------------------------------------------------------
-Last Page: file:///C:/Users/axel.schnurer/Documents/GitHub/Bengans-Biluthyrning/index.html
-  Browser: chrome (105.0.5195.102)
-   Driver: chromedriver (105.0.5195.52)
-Timestamp: 1662457963  (Unix Timestamp)
+Last Page: file:///C:/Users/leon.loov/Documents/GitHub/Bengans-Biluthyrning/index.html
+  Browser: chrome (104.0.5112.102)
+   Driver: chromedriver (104.0.5112.79)
+Timestamp: 1662465580  (Unix Timestamp)
      Date: Tuesday, 6 September 2022
-     Time: 11:52:43 AM  (Västeuropa, sommartid, UTC+01:00)
+     Time: 1:59:40 PM  (Västeuropa, sommartid, UTC+01:00)
 --------------------------------------------------------------------
-Traceback: File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.1776.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 591, in run
+Traceback: File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 591, in run
     self._callTestMethod(testMethod)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.1776.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 549, in _callTestMethod
+  File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 549, in _callTestMethod
     method()
-  File "C:\Users\axel.schnurer\Documents\GitHub\Bengans-Biluthyrning\tests\bengans_biluthyrning_test.py", line 26, in testIcons
-    self.click("#twitter", by="css selector", timeout=None, delay=0, scroll=True)
-  File "C:\Users\axel.schnurer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\base_case.py", line 281, in click
+  File "C:\Users\leon.loov\Documents\GitHub\Bengans-Biluthyrning\tests\bengans_biluthyrning_test.py", line 28, in testIcons
+    self.click(socialMedia[i], "body", timeout=None, delay=0, scroll=True)
+  File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\site-packages\seleniumbase\fixtures\base_case.py", line 281, in click
     element = page_actions.wait_for_element_visible(
-  File "C:\Users\axel.schnurer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\page_actions.py", line 423, in wait_for_element_visible
+  File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\site-packages\seleniumbase\fixtures\page_actions.py", line 423, in wait_for_element_visible
     timeout_exception(NoSuchElementException, message)
-  File "C:\Users\axel.schnurer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\page_actions.py", line 192, in timeout_exception
+  File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\site-packages\seleniumbase\fixtures\page_actions.py", line 192, in timeout_exception
     raise exc(msg)
 Exception: Message: 
- Element {#twitter} was not present after 7 seconds!
+ Element {#facebook} was not present after 7 seconds!
