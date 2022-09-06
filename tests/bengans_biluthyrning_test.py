@@ -24,8 +24,8 @@ class basicInformation(BaseCase):
     def testIcons(self):
         for i in range(len(socialMedia)):
             self.open(startPage)
-            self.is_element_present(socialMedia[i], "body")
-            self.click(socialMedia[i], "body", timeout=None, delay=0, scroll=True)
+            self.assert_element(socialMedia[i])
+            self.click(socialMedia[i])
             if(self.get_current_url() != socialLinks[i]):
                 raise NameError(f"Failed at {socialMedia[i]}")
 
