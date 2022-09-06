@@ -61,4 +61,4 @@ programming language default:
 
 - All documents and spreadsheets must be upploaded to Google Drive and all code must be uploaded to GitHub.  
 
-- Task must be subbmited to the presentation document if it is present in the backlog. 
+- Task must be submitted to the presentation document if it is present in the backlog. 
