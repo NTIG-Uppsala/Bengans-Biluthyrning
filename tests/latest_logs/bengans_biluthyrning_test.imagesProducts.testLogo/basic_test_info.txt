@@ -1,0 +1,25 @@
+bengans_biluthyrning_test.py::imagesProducts::testLogo
+--------------------------------------------------------------------
+Last Page: file:///C:/Users/axel.schnurer/Documents/GitHub/Bengans-Biluthyrning/index.html
+  Browser: chrome (105.0.5195.102)
+   Driver: chromedriver (105.0.5195.52)
+Timestamp: 1662539289  (Unix Timestamp)
+     Date: Wednesday, 7 September 2022
+     Time: 10:28:09 AM  (Västeuropa, sommartid, UTC+01:00)
+--------------------------------------------------------------------
+Traceback: File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2032.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2032.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 549, in _callTestMethod
+    method()
+  File "C:\Users\axel.schnurer\Documents\GitHub\Bengans-Biluthyrning\tests\bengans_biluthyrning_test.py", line 46, in testLogo
+    self.assert_element("head > link[href=\"/images/favicon.ico\"][rel=\"icon\"]") #Checks for a link to favicon in head
+  File "C:\Users\axel.schnurer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\base_case.py", line 10285, in assert_element
+    self.wait_for_element_visible(selector, by=by, timeout=timeout)
+  File "C:\Users\axel.schnurer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\base_case.py", line 7666, in wait_for_element_visible
+    return page_actions.wait_for_element_visible(
+  File "C:\Users\axel.schnurer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\page_actions.py", line 423, in wait_for_element_visible
+    timeout_exception(NoSuchElementException, message)
+  File "C:\Users\axel.schnurer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\page_actions.py", line 192, in timeout_exception
+    raise exc(msg)
+Exception: Message: 
+ Element {head > link[href="/images/favicon.ico"][rel="icon"]} was not present after 7 seconds!

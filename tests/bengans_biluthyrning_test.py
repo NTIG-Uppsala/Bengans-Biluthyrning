@@ -10,6 +10,8 @@ socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/nt
 
 pictureIds = ["#bild1", "#bild2", "#bild3"] #ids for different images
 
+productList = ["Audi A6", "Renault Kadjar", "Kia Soul", "Subaru Outback", "Caddilac Escalade", "Mitshubichi Outlander", "Volvo XC40", "VW Polo", "Kia Carens"] #product list
+
 class workingWebsite(BaseCase):
     def testText(self):   #defining first test
         self.open(startPage) #opens the page in browser
@@ -31,13 +33,16 @@ class basicInformation(BaseCase):
                 raise NameError(f"Failed at {socialMedia[i]}")
 
 class imagesProducts(BaseCase):
-    def testText(self):  
+    def testImages(self):  
         self.open(startPage)        #self.open another page later
         for i in pictureIds:
             self.assert_element(f"img{i}") #Checks for the 3 images
-        #check for products
-        #check for logo in header
+    def testProducts(self): #check for products
+        self.open(startPage)
+        for i in productList:
+            self.assert_text(i, "body")
+    def testLogo(self): 
+        self.open(startPage)
         self.assert_element("head > link[href=\"/images/favicon.ico\"][rel=\"icon\"]") #Checks for a link to favicon in head
-
-
+        self.assert_element("img#logo") #check for image with logo id
 # Överrubriker i backlogg är klasser, underrubrik är funktioner
