@@ -3,9 +3,9 @@ bengans_biluthyrning_test.py::imagesProducts::testLogo
 Last Page: file:///C:/Users/axel.schnurer/Documents/GitHub/Bengans-Biluthyrning/index.html
   Browser: chrome (105.0.5195.102)
    Driver: chromedriver (105.0.5195.52)
-Timestamp: 1662539289  (Unix Timestamp)
+Timestamp: 1662544585  (Unix Timestamp)
      Date: Wednesday, 7 September 2022
-     Time: 10:28:09 AM  (Västeuropa, sommartid, UTC+01:00)
+     Time: 11:56:25 AM  (Västeuropa, sommartid, UTC+01:00)
 --------------------------------------------------------------------
 Traceback: File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2032.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 591, in run
     self._callTestMethod(testMethod)
