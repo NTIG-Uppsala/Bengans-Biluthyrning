@@ -1,14 +1,14 @@
 from seleniumbase import BaseCase  #importing testing framework
 import pathlib
 
-startPage = "file:///" + str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/") + "index.html" #website url
+startPage = "file:///" + str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/") + "index.html" #find location of index.html and prepare formatting
 
-basicInfoTexts = ["Fjällgatan 32H, 981 39 Jönköping", "Vardagar: 10-16", "Lördagar: 12-15", "Söndagar: Stängt", "0630-555-555", "info@<DOMÄN>"]
+basicInfoTexts = ["Fjällgatan 32H, 981 39 Jönköping", "Vardagar: 10-16", "Lördagar: 12-15", "Söndagar: Stängt", "0630-555-555", "info@<DOMÄN>"] #basic info to test for
 
-socialMedia = ["#facebook", "#twitter", "#instagram"]
-socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/ntiuppsala", "https://www.instagram.com/ntiuppsala/"]
+socialMedia = ["#facebook", "#twitter", "#instagram"] #ids for different social media .svg imgs
+socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/ntiuppsala", "https://www.instagram.com/ntiuppsala/"] #relevant social media links
 
-pictureIds = ["#bild1", "#bild2", "#bild3"]
+pictureIds = ["#bild1", "#bild2", "#bild3"] #ids for different images
 
 class workingWebsite(BaseCase):
     def testText(self):   #defining first test
