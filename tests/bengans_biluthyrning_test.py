@@ -8,10 +8,10 @@ startPage = "file:///" + str(pathlib.Path(__file__).parent.resolve())[:-5].repla
 
 basicInfoTexts = ["Fjällgatan 32H, 981 39 Jönköping", "Vardagar: 10-16", "Lördagar: 12-15", "Söndagar: Stängt", "0630-555-555", "info@<DOMÄN>"] # Basic info to test for
 
-socialMedia = ["#facebook", "#twitter", "#instagram"] # IDs for different social media .svg imgs
+socialMediaPaths = ["src/images/facebook.svg", "src/images/twitter.svg", "src/images/instagram.svg"] # Paths for different social media .svg imgs
 socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/ntiuppsala", "https://www.instagram.com/ntiuppsala/"] # Relevant social media links
 
-pictureIds = ["#bild1", "#bild2", "#bild3"] # IDs for different images
+picturePaths = ["src/images/bild1.jpg", "src/images/bild2.jpg", "src/images/bild3.jpg"] # Paths for the images
 
 productList = ["Audi A6", "Renault Kadjar", "Kia Soul", "Subaru Outback", "Caddilac Escalade", "Mitshubichi Outlander", "Volvo XC40", "VW Polo", "Kia Carens"] # List of products
 
@@ -29,17 +29,17 @@ class basicInformation(BaseCase):
         for i in basicInfoTexts:
             self.assert_text(i, "body") # Check for all info in basicInfoTexts[]
     def testIcons(self):
-        for i in range(len(socialMedia)):
+        for i in range(len(socialMediaPaths)):
             self.open(startPage)
-            self.click(socialMedia[i]) # Check that the icon link exists, and clicks if it does
+            self.click(f"[src=\"{socialMediaPaths[i]}\"]") # Check that the icon link exists, and clicks if it does
             if(self.get_current_url() != socialLinks[i]): # Checks that links lead to the right place
-                raise NameError(f"Failed at {socialMedia[i]}")
+                raise NameError(f"Failed at {socialMediaPaths[i]}")
 
 class imagesAndProducts(BaseCase):
     def testImages(self):  
         self.open(startPage)        # self.open another page later
-        for i in pictureIds:
-            self.assert_element(f"img{i}") # Check for the 3 images by ID
+        for i in picturePaths:
+            self.assert_element(f"img[src=\"{i}\"]") # Check for the 3 images by path
     def testProducts(self):
         self.open(startPage)        # self.open another page later
         for i in productList:
@@ -48,7 +48,7 @@ class imagesAndProducts(BaseCase):
         self.open(startPage)
         # It is not possible to test for the content of <link>s, therefore we have decided to treat the favicon like a page design, untestable and therefore passed by default.
         # self.assert_element("head > link[sizes=\"32x32\"][href=\"src/images/icons/favicon-32x32.png\"]") #Checks for a link to 32x32 favicon in head
-        self.assert_element("img#logo") # Check for an image with the ID #logo
+        self.assert_element("img[src=\"src/images/logo.svg\"]") # Check for an image with the ID #logo
         # Repeat for all pages once we add more
 
 
