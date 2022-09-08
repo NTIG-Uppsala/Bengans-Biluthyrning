@@ -55,7 +55,7 @@ programming language default:
 
 - Unless everyone present has worked togheter, the remaining people must check the task before it can be considered done. 
 
-- Code must pass all tests and code validation.
+- Code must pass all relevant tests and code validation.
 
 - Code must follow the coding standard.
 
