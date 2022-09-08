@@ -2,17 +2,15 @@ body {
   margin: 0;
   overflow-x: hidden;
   height: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }  
+
+h1 {
+  font-size: 1.5em;
+}
 
 img {
   height: 100vh; /* Fix on pc using media queries*/
-}
-
-/* This somehow solves a bug where the header loses its border-radius and the margins becomes messed up whenever the phone is rotated*/
-.emptyDiv { 
-  height: 150px;
-  width: 100vw;
-  position: absolute;
 }
 
 #bild1 {
@@ -47,10 +45,12 @@ img {
 
 .header {
   width: 100vw;
-  height: 100px;
+  height: 75px;
   background-color: white;
   color: black;
   border-radius: 0px 0px 10px 10px;
+  font-weight: 600;
+  font-size: 1em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -94,6 +94,7 @@ img {
   height: 45px;
   background-color: #7A87FF;
   color: white;
+  font-weight: bold;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -102,6 +103,11 @@ img {
   position: absolute;
   bottom: 125px;
   z-index: 2;
+}
+
+#rentButton:hover {
+  background-color: #6675ff;
+  cursor: pointer;
 }
 
 .linkIconFlex {
@@ -125,6 +131,7 @@ img {
   height: auto;
   color: white;
   position: absolute;
+  text-align: center;
   z-index: 2;
 }
 
@@ -133,5 +140,67 @@ img {
   height: auto;
   color: white;
   position: absolute;
+  line-height: 1.5em;
   z-index: 2;
+}
+
+.slogan {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  font-size: 2em;
+  color: white;
+  line-height: 1em;
+  z-index: 3;
+}
+
+.blue {
+  color: #7A87FF;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 992px) {
+  img {
+    width: 100vw;
+    height: auto;
+  }  
+  .header {
+    height: 125px;
+    font-size: 2.5em;
+  }
+  #rentButton {
+    width: 280px;
+    height: 90px;
+    bottom: 250px;
+    font-size: 2em;
+    border-radius: 15px;
+  }
+  .linkIconFlex {
+    bottom: 25px;
+  }
+  #twitter{
+    width: 100px;
+    height: 100px;
+  }
+  #facebook {
+    width: 100px;
+    height: 100px;
+  }
+  #instagram {
+    width: 100px;
+    height: 100px;
+  }
+  #openTimes {
+    font-size: 2em;
+  }
+  #cars {
+    font-size: 2em;
+  }
+  .slogan{
+    font-size: 5em;
+    left: 25%;
+  }
 }
