@@ -3,14 +3,15 @@ body {
   overflow-x: hidden;
   height: auto;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}  
+}
 
 h1 {
   font-size: 1.5em;
 }
 
 img {
-  height: 100vh; /* Fix on pc using media queries*/
+  height: 100vh;
+  /* Fix on pc using media queries*/
 }
 
 #bild1 {
@@ -59,7 +60,7 @@ img {
   z-index: 10;
 }
 
-.header > div {
+.header>div {
   width: auto;
   height: auto;
   margin: auto;
@@ -71,7 +72,7 @@ img {
   flex-direction: column;
 }
 
-.backgroundFlex > div {
+.backgroundFlex>div {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -122,7 +123,7 @@ img {
   align-items: center;
 }
 
-.linkIconFlex > div {
+.linkIconFlex>div {
   margin: 25px;
 }
 
@@ -166,11 +167,13 @@ img {
   img {
     width: 100vw;
     height: auto;
-  }  
+  }
+
   .header {
     height: 125px;
     font-size: 2.5em;
   }
+
   #rentButton {
     width: 280px;
     height: 90px;
@@ -178,28 +181,35 @@ img {
     font-size: 2em;
     border-radius: 15px;
   }
+
   .linkIconFlex {
     bottom: 25px;
   }
-  #twitter{
+
+  #twitter {
     width: 100px;
     height: 100px;
   }
+
   #facebook {
     width: 100px;
     height: 100px;
   }
+
   #instagram {
     width: 100px;
     height: 100px;
   }
+
   #openTimes {
     font-size: 2em;
   }
+
   #cars {
     font-size: 2em;
   }
-  .slogan{
+
+  .slogan {
     font-size: 5em;
     left: 25%;
   }
