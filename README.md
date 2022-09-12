@@ -60,6 +60,6 @@ programming language default:
 
 - Code must follow the coding standard.
 
-- All documents and spreadsheets must be upploaded to Google Drive and all code must be uploaded to GitHub.  
+- All documents and spreadsheets must be uploaded to Google Drive and all code must be uploaded to GitHub.  
 
 - Task must be submitted to the presentation document if it is present in the backlog. 
