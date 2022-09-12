@@ -54,7 +54,7 @@ programming language default:
 
 # Definition of Done
 
-- Unless everyone present has worked togheter, the remaining people must check the task before it can be considered done. 
+- Unless everyone present has worked together, the remaining people must check the task before it can be considered done. 
 
 - Code must pass all relevant tests and code validation.
 
