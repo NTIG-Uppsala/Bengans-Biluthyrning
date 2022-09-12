@@ -4,7 +4,7 @@ import pathlib
 # To start the test, run "python -m pytest .\bengans_biluthyrning_test.py" in "\Bengans-Biluthyrning\tests"
 # or "python -m pytest .\tests\bengans_biluthyrning_test.py" in "\Bengans-Biluthyrning"
 
-startPage = "file:///" + str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/") + "index.html" # Find location of index.html and prepare formatting
+startPage = "file://" + str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/") + "index.html" # Find location of index.html and prepare formatting
 
 basicInfoTexts = ["Fjällgatan 32H, 981 39 Jönköping", "Vardagar: 10-16", "Lördagar: 12-15", "Söndagar: Stängt", "0630-555-555", "info@<DOMÄN>"] # Basic info to test for
 

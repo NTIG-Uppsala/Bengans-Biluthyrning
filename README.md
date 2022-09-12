@@ -1,5 +1,5 @@
 # Bengans-Biluthyrning
-Hemsida åt Bengans Biluthyrning - 1/4 Finsk 
+Website for Bengans Biluthyrning, created by the group "1/4 Finsk"
 ## [Link to live website](https://ntig-uppsala.github.io/Bengans-Biluthyrning/)
 
 # Programming Languages
@@ -11,6 +11,7 @@ This project uses
 # Development Environment:
 ## Visual Studio Code
 - [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+<!-- Autoformatting -->
 
 ## Google Chrome
 Google Chrome is used during testing. 
