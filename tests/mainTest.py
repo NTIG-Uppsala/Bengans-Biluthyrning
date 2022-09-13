@@ -1,8 +1,8 @@
 from seleniumbase import BaseCase  # importing testing framework
 import pathlib
 
-# To start the test, run "python -m pytest .\bengans_biluthyrning_test.py" in "\Bengans-Biluthyrning\tests"
-# or "python -m pytest .\tests\bengans_biluthyrning_test.py" in "\Bengans-Biluthyrning"
+# To start the test, run "python -m pytest .\mainTest.py" in "\Bengans-Biluthyrning\tests"
+# or "python -m pytest .\tests\mainTest.py" in "\Bengans-Biluthyrning"
 
 startPage = "file://" + str(pathlib.Path(__file__).parent.resolve())[:-5].replace(
     "\\", "/") + "index.html"  # Find location of index.html and prepare formatting
