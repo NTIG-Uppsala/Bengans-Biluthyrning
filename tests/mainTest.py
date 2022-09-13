@@ -10,16 +10,18 @@ startPage = "file://" + str(pathlib.Path(__file__).parent.resolve())[:-5].replac
 basicInfoTexts = ["Fjällgatan 32H, 981 39 Jönköping", "Vardagar: 10-16", "Lördagar: 12-15",
                   "Söndagar: Stängt", "0630-555-555", "info@<DOMÄN>"]  # Basic info to test for
 
-socialMediaPaths = ["src/images/facebook.svg", "src/images/twitter.svg",
-                    "src/images/instagram.svg"]  # Paths for different social media .svg imgs
+socialMediaPaths = ["src/images/svg/facebookIcon.svg", "src/images/svg/twitterIcon.svg",
+                    "src/images/svg/instagramIcon.svg"]  # Paths for different social media .svg imgs
 socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/ntiuppsala",
                "https://www.instagram.com/ntiuppsala/"]  # Relevant social media links
 
+'''
 picturePaths = ["src/images/bild1.jpg", "src/images/bild2.jpg",
                 "src/images/bild3.jpg"]  # Paths for the images
+'''
 
-productList = ["Audi A6", "Renault Kadjar", "Kia Soul", "Subaru Outback", "Caddilac Escalade",
-               "Mitshubichi Outlander", "Volvo XC40", "VW Polo", "Kia Carens"]  # List of products
+productList = ["Audi A6", "Renault Kadjar", "Kia Soul", "Subaru Outback", "Cadillac Escalade",
+               "Mitsubishi Outlander", "Volvo XC40", "VW Polo", "Kia Carens"]  # List of products
 
 
 class workingWebsite(BaseCase):
@@ -52,11 +54,18 @@ class basicInformation(BaseCase):
 
 
 class imagesAndProducts(BaseCase):
+    '''
     def testImages(self):
         self.open(startPage)        # self.open another page later
         for i in picturePaths:
             # Check for the 3 images by path
             self.assert_element(f"img[src=\"{i}\"]")
+    '''
+
+    # Check for background image
+    def testBackground(self):
+        self.open(startPage)
+        self.assert_attribute("")
 
     def testProducts(self):
         self.open(startPage)        # self.open another page later
@@ -66,7 +75,7 @@ class imagesAndProducts(BaseCase):
     def testLogo(self):
         self.open(startPage)
         # It is not possible to test for the content of <link>s, therefore we have decided to treat the favicon like a page design, untestable and therefore passed by default.
-        # self.assert_element("head > link[sizes=\"32x32\"][href=\"src/images/icons/favicon-32x32.png\"]") #Checks for a link to 32x32 favicon in head
+        # self.assert_element("head > link[sizes=\"32x32\"][href=\"src/images/favicons/favicon-32x32.png\"]") #Checks for a link to 32x32 favicon in head
         # Check for an image with the ID #logo
         self.assert_element("img[src=\"src/images/logo.svg\"]")
         # Repeat for all pages once we add more
