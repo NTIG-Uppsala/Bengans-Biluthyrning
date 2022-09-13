@@ -4,8 +4,13 @@ import pathlib
 # To start the test, run "python -m pytest .\mainTest.py" in "\Bengans-Biluthyrning\tests"
 # or "python -m pytest .\tests\mainTest.py" in "\Bengans-Biluthyrning"
 
-startPage = "file://" + str(pathlib.Path(__file__).parent.resolve())[:-5].replace(
-    "\\", "/") + "index.html"  # Find location of index.html and prepare formatting
+# Find file path and prepare formatting
+filePath = "file://" + \
+    str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
+
+startPage = filePath + "index.html"  # Path to index.html
+
+productPage = filePath + "products.html"  # Path to products.html
 
 basicInfoTexts = ["Fjällgatan 32H, 981 39 Jönköping", "Vardagar: 10-16", "Lördagar: 12-15",
                   "Söndagar: Stängt", "0630-555-555", "info@<DOMÄN>"]  # Basic info to test for
@@ -65,7 +70,7 @@ class imagesAndProducts(BaseCase):
     # Check for background image
     def testBackground(self):
         self.open(startPage)
-        self.assert_attribute("")
+        self.assert_element("[src=\"src/images/homepageImage.jpg\"]")
 
     def testProducts(self):
         self.open(startPage)        # self.open another page later
@@ -77,7 +82,7 @@ class imagesAndProducts(BaseCase):
         # It is not possible to test for the content of <link>s, therefore we have decided to treat the favicon like a page design, untestable and therefore passed by default.
         # self.assert_element("head > link[sizes=\"32x32\"][href=\"src/images/favicons/favicon-32x32.png\"]") #Checks for a link to 32x32 favicon in head
         # Check for an image with the ID #logo
-        self.assert_element("img[src=\"src/images/logo.svg\"]")
+        self.assert_element("img[src=\"src/images/svg/logo.svg\"]")
         # Repeat for all pages once we add more
 
 
