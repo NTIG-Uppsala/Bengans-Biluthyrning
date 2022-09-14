@@ -24,7 +24,11 @@ openHours = {
     "Söndagar:":"Stängt"
     }
 
-
+contactInfo = {
+    "Adress:":"Fjällgatan 32H,\\s+981 39 Jönköping",
+    "Telefonnummer:":"0630-555[- ]555",
+    "Mail:":"info@<DOMÄN>"
+}
 
 class workingWebsite(BaseCase):
     def testTitle(self):
@@ -47,15 +51,20 @@ class footer(BaseCase):
     
     def testOpenHours(self):
         self.open(startPage)
-        # footerText = self.get_text("#footer")
-        footerText = self.get_text("body")
-        print(footerText)
+        footerText = self.get_text("#footer")
         for i in openHours:
-            x = re.compile(f"{i}[ \t\n\r\f\v]+{openHours[i]}")
-            if not x.match(footerText):
+            x = re.compile(f"{i}\\s+{openHours[i]}")
+            if not x.search(footerText):
                 raise NameError(f"{i[:-1]} not correct")
 
-
-
+    def testContactInfo(self):
+        self.open(startPage)
+        footerText = self.get_text("#footer")
+        for i in contactInfo:
+            x = re.compile(f"{i}\\s+{contactInfo[i]}")
+            if not x.search(footerText):
+                raise NameError(f"{i[:-1]} not correct")
+    
+    
 
 # Categories in the backlog are represented as classes, every item in the backlog has its own test
