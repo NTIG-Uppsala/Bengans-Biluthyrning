@@ -1,17 +1,42 @@
+/* Remember to sort */ 
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
-  height: 200vh;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: auto;
+  font-family: 'Trebuchet MS';
+}
+
+a:link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:active {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .header {
   width: 100vw;
-  height: calc(5vh + 3rem);
+  height: auto;
   background-color: #f5f5f5;
-  border-radius: 0px 0px 25px 25px;
+  border-radius: 0px 0px 10px 10px;
   position: fixed;
-  top: 0px;
   z-index: 9999;
   display: flex;
   flex-direction: row;
@@ -20,20 +45,24 @@ body {
   overflow: hidden;
 }
 
+.header > div {
+  margin: 25px;
+}
+
 #logo {
-  width: 5vw;
+  width: 8vw;
   margin-left: 25px;
 }
 
 #title {
-  font-size: calc(1vw + .5rem);
+  font-size: calc(2vw + .5rem);
   font-weight: bold;
   margin-left: 25px;
 }
 
 .main {
   width: 100vw;
-  height: 100vh;
+  height: 101vh;
   background-color: rgb(0, 0, 0, 0.6);
   color: white;
   display: flex;
@@ -46,6 +75,20 @@ body {
 .main > div {
   width: auto;
   height: auto;
+}
+
+.main > a {
+  margin: auto;
+}
+
+.image {
+  width: 100vw;
+  height: 101vh;
+  background-image: url(../images/homepageImage.jpg);
+  background-size: cover;
+  background-position: center top;
+  position: absolute;
+  z-index: -1;
 }
 
 #sloganTitle {
@@ -82,6 +125,28 @@ body {
 #rentButton:hover {
   cursor: pointer;
   background-color: red;
+}
+
+.footer {
+  height: auto;
+  width: 100vw;
+  background-color: #f5f5f5;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: calc(1vw + .5rem);;
+  padding: 50px 0px 50px 0px;
+  line-height: 1.5em;
+  border-radius: 10px 10px 0px 0px;
+  position: absolute;
+  top: 100vh;
+}
+
+.footer > div {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (orientation: portrait) {
