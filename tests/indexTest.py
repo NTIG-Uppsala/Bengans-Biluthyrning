@@ -30,12 +30,10 @@ contactInfo = {
     "Mail:": "info@<DOMÄN>"
 }
 
-
 class workingWebsite(BaseCase):
     def testTitle(self):
         self.open(startPage)
         self.assert_title("Bengans Biluthyrning")
-
 
 class footer(BaseCase):
     def testSocials(self):
@@ -69,8 +67,19 @@ class header(BaseCase):
         self.open(startPage)
         self.assert_text("Bengans Biluthyrning", "#header")
 
+    def testMenu(self):
+        self.open(startPage)
+        self.assert_element("#header > a[\"href=/products.html\"]")
+    
     def testLogo(self):
         self.open(startPage)
+        #self.assert_element(
+        #    "#header > a[\"href=index.html\"] > [src=\"src/images/svg/logo.svg\"]")
         self.assert_element("#header > [src=\"src/images/svg/logo.svg\"]")
+    
+    
+
+
+
 
 # Categories in the backlog are represented as classes, every item in the backlog has its own test
