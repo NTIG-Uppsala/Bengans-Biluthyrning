@@ -13,7 +13,7 @@ startPage = filePath + "index.html"  # Path to index.html
 
 productPage = filePath + "products.html"  # Path to products.html
 
-socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/ntiuppsala",
+socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/ntiuppsala/",
                "https://www.instagram.com/ntiuppsala/"]  # Relevant social media links
 socialMediaPaths = ["src/images/svg/facebookIcon.svg", "src/images/svg/twitterIcon.svg",
                     "src/images/svg/instagramIcon.svg"]  # Paths for different social media .svg imgs
@@ -24,11 +24,8 @@ openHours = {
     "Söndagar:": "Stängt"
 }
 
-contactInfo = {
-    "Adress:": "Fjällgatan 32H,\\s+981 39 Jönköping",
-    "Telefonnummer:": "0630-555[- ]555",
-    "Mail:": "info@<DOMÄN>"
-}
+contactInfo = ["Fjällgatan 32H,\\s+981 39 Jönköping",
+               "0630-555[- ]555", "\\w+@[\\w<>]+"]
 
 products = {
         "Audi A6",
@@ -69,9 +66,9 @@ class footer(BaseCase):
         self.open(productPage)
         footerText = self.get_text("#footer")
         for i in contactInfo:
-            x = re.compile(f"{i}\\s+{contactInfo[i]}")
+            x = re.compile(i)
             if not x.search(footerText):
-                raise NameError(f"{i[:-1]} not correct")
+                raise NameError(f"{i} does not match found text.")
 
 
 class header(BaseCase):
