@@ -1,0 +1,26 @@
+tests/mainTest.py::workingWebsite::testName
+--------------------------------------------------------------------
+Last Page: file:///C:/Users/Nikole/Documents/GitHub/Bengans-Biluthyrning/index.html
+  Browser: chrome (105.0.5195.102)
+   Driver: chromedriver (105.0.5195.52)
+Timestamp: 1663141090  (Unix Timestamp)
+     Date: Wednesday, 14 September 2022
+     Time: 9:38:10 AM  (W. Europe Daylight Time, UTC+01:00)
+--------------------------------------------------------------------
+Traceback: File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2032.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.2032.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 549, in _callTestMethod
+    method()
+  File "C:\Users\Nikole\Documents\GitHub\Bengans-Biluthyrning\tests\mainTest.py", line 22, in testName
+    self.assert_text("Bengans Biluthyrning")
+  File "C:\Users\Nikole\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\base_case.py", line 10477, in assert_text
+    self.wait_for_text_visible(text, selector, by=by, timeout=timeout)
+  File "C:\Users\Nikole\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\base_case.py", line 10402, in wait_for_text_visible
+    return page_actions.wait_for_text_visible(
+  File "C:\Users\Nikole\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\page_actions.py", line 542, in wait_for_text_visible
+    timeout_exception(TextNotVisibleException, message)
+  File "C:\Users\Nikole\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\seleniumbase\fixtures\page_actions.py", line 192, in timeout_exception
+    raise exc(msg)
+Exception: Message: 
+ Expected text substring {Bengans Biluthyrning} for {html} was not visible after 7 seconds!
+ (Actual string found was {-\n Bengans\n Vi är Bengans.\n \n Bra Bilar.\n Bättre Priser.\n Hyr Nu\n Adress:\n Fjällgatan 32H, 981 39 Jönköping\n \n Öppettider:\n Vardagar: 10-16\n Lördagar: 12-15\n Söndagar: Stängt\n \n Telefonnummer:\n 0630-555-555\n \n Mail:\n info@<DOMÄN>\n Våra bilar:\n Audi A6\n Renault Kadjar\n Kia Soul\n Subaru Outback\n Caddilac Escalade\n Mitshubichi Outlander\n Volvo XC40\n VW Polo\n Kia Carens})
