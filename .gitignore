@@ -1,0 +1,6 @@
+$ cat .gitignore
+
+.pytest_cache/
+archived_logs/
+latest_logs/
+__pycache__/
