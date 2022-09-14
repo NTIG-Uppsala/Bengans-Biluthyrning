@@ -2,8 +2,8 @@ from seleniumbase import BaseCase  # importing testing framework
 import pathlib
 import re
 
-# To start the test, run "python -m pytest .\mainTest.py" in "\Bengans-Biluthyrning\tests"
-# or "python -m pytest .\tests\mainTest.py" in "\Bengans-Biluthyrning"
+# To start the test, run "python -m pytest .\productTest.py" in "\Bengans-Biluthyrning\tests"
+# or "python -m pytest .\tests\productTest.py" in "\Bengans-Biluthyrning"
 
 # Find file path and prepare formatting
 filePath = "file://" + \
@@ -81,7 +81,7 @@ class header(BaseCase):
 
     def testMenu(self):
         self.open(productPage)
-        self.assert_element("#header > a[\"href=/index.html\"]")
+        self.assert_element("#header > a[href=\"index.html\"]")
     
     def testLogo(self):
         self.open(productPage)
