@@ -1,6 +1,4 @@
-$ cat .gitignore
-
 .pytest_cache/
-archived_logs/
-latest_logs/
+*logs/
 __pycache__/
+basic_test_info.txt

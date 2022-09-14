@@ -3,9 +3,9 @@ tests/mainTest.py::footer::testOpenHours
 Last Page: file:///C:/Users/leon.loov/Documents/GitHub/Bengans-Biluthyrning/index.html
   Browser: chrome (105.0.5195.102)
    Driver: chromedriver (105.0.5195.52)
-Timestamp: 1663154971  (Unix Timestamp)
+Timestamp: 1663156500  (Unix Timestamp)
      Date: Wednesday, 14 September 2022
-     Time: 1:29:31 PM  (Västeuropa, sommartid, UTC+01:00)
+     Time: 1:55:00 PM  (Västeuropa, sommartid, UTC+01:00)
 --------------------------------------------------------------------
 Traceback: File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 591, in run
     self._callTestMethod(testMethod)
