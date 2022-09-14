@@ -1,5 +1,6 @@
 from seleniumbase import BaseCase  # importing testing framework
 import pathlib
+import re
 
 # To start the test, run "python -m pytest .\mainTest.py" in "\Bengans-Biluthyrning\tests"
 # or "python -m pytest .\tests\mainTest.py" in "\Bengans-Biluthyrning"
@@ -16,6 +17,14 @@ socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/nt
                "https://www.instagram.com/ntiuppsala/"]  # Relevant social media links
 socialMediaPaths = ["src/images/svg/facebookIcon.svg", "src/images/svg/twitterIcon.svg",
                     "src/images/svg/instagramIcon.svg"]  # Paths for different social media .svg imgs
+
+openHours = {
+    "Vardagar:":"10-16",
+    "Lördagar:":"12-15",
+    "Söndagar:":"Stängt"
+    }
+
+
 
 class workingWebsite(BaseCase):
     def testTitle(self):
@@ -38,8 +47,13 @@ class footer(BaseCase):
     
     def testOpenHours(self):
         self.open(startPage)
-        footerText = self.get_text("#footer")
-        
+        # footerText = self.get_text("#footer")
+        footerText = self.get_text("body")
+        print(footerText)
+        for i in openHours:
+            x = re.compile(f"{i}[ \t\n\r\f\v]+{openHours[i]}")
+            if not x.match(footerText):
+                raise NameError(f"{i[:-1]} not correct")
 
 
 
