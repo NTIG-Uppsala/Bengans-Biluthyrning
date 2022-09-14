@@ -18,6 +18,7 @@ socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/nt
 socialMediaPaths = ["src/images/svg/facebookIcon.svg", "src/images/svg/twitterIcon.svg",
                     "src/images/svg/instagramIcon.svg"]  # Paths for different social media .svg imgs
 
+# Make these more flexible
 openHours = {
     "Vardagar:": "10-16",
     "Lördagar:": "12-15",
