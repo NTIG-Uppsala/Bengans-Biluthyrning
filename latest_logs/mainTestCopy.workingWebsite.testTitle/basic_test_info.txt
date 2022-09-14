@@ -1,0 +1,28 @@
+tests/mainTestCopy.py::workingWebsite::testTitle
+--------------------------------------------------------------------
+Last Page: file:///C:/Users/leon.loov/Documents/GitHub/Bengans-Biluthyrning/index.html
+  Browser: chrome (105.0.5195.102)
+   Driver: chromedriver (105.0.5195.52)
+Timestamp: 1663140772  (Unix Timestamp)
+     Date: Wednesday, 14 September 2022
+     Time: 9:32:52 AM  (Västeuropa, sommartid, UTC+01:00)
+--------------------------------------------------------------------
+Traceback: File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 591, in run
+    self._callTestMethod(testMethod)
+  File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 549, in _callTestMethod
+    method()
+  File "C:\Users\leon.loov\Documents\GitHub\Bengans-Biluthyrning\tests\mainTestCopy.py", line 18, in testTitle
+    self.assert_title("Bengans Biluthytsdrdstddtrning")
+  File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\site-packages\seleniumbase\fixtures\base_case.py", line 6331, in assert_title
+    self.assertEqual(expected, actual, error % (expected, actual))
+  File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 1226, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Users\leon.loov\AppData\Local\Programs\Python\Python310\lib\unittest\case.py", line 675, in fail
+    raise self.failureException(msg)
+Exception: 'Bengans Biluthytsdrdstddtrning' != 'Bengans Biluthyrning'
+- Bengans Biluthytsdrdstddtrning
+?                ----------
++ Bengans Biluthyrning
+ : Expected page title [Bengans Biluthytsdrdstddtrning] does not match the actual title [Bengans Biluthyrning]!
