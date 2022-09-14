@@ -15,7 +15,7 @@ productPage = filePath + "products.html"  # Path to products.html
 class workingWebsite(BaseCase):
     def testTitle(self):
         self.open(startPage)
-        self.assert_title("Bengans Biluthyrning")
+        self.assert_title("Bengans Biluthytsdrdstddtrning")
     
 
 
