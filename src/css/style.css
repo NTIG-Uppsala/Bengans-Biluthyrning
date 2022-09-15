@@ -317,6 +317,7 @@ h1 {
   }
   .cardTextMargin {
     margin: 5px;
+    line-height: 10px;
   }
   .carName {
     font-size: .75em;
@@ -330,7 +331,6 @@ h1 {
   #title {
     font-size: calc(1vw + .35rem);
   }
-  
   .main {
     font-size: calc(3vw + .35rem);
   }
