@@ -51,7 +51,7 @@ class footer(BaseCase):
 
     def testOpenHours(self):
         self.open(startPage)
-        footerText = self.get_text("#footer")
+        footerText = self.get_text(".footer")
         for i in openHours:
             x = re.compile(f"{i}\\s+{openHours[i]}")
             if not x.search(footerText):
@@ -59,7 +59,7 @@ class footer(BaseCase):
 
     def testContactInfo(self):
         self.open(startPage)
-        footerText = self.get_text("#footer")
+        footerText = self.get_text(".footer")
         for i in contactInfo:
             x = re.compile(i)
             if not x.search(footerText):
