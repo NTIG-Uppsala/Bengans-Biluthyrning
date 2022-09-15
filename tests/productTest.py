@@ -28,7 +28,7 @@ openHours = {
 contactInfo = ["Fjällgatan 32H,\\s+981 39 Jönköping",
                "0630-555[- ]555", "info.bengans@gmail.com"]
 
-products = {
+productlist = [
         "Audi A6",
         "Renault Kadjar",
         "Kia Soul",
@@ -38,7 +38,7 @@ products = {
         "Volvo XC40",
         "VW Polo",
         "Kia Carens"
-}
+]
 
 class workingWebsite(BaseCase):
     def testTitle(self):
@@ -90,7 +90,7 @@ class header(BaseCase):
 class products(BaseCase):
     def testProducts(self):
         self.open(productPage)
-        for i in products:
+        for i in productlist:
             self.assert_text(i)
 
 
