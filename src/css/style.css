@@ -148,8 +148,8 @@ a:active {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  font-size: calc(1vw + .5rem);;
-  padding: 50px 0px 50px 0px;
+  font-size: calc(1vw + .5rem);
+  padding: 15px 0px 15px 0px;
   line-height: 1.5em;
   border-radius: 10px 10px 0px 0px;
   position: absolute;
@@ -160,23 +160,31 @@ a:active {
   top: auto;
 }
 
-#footer > div {
+h1 {
+  line-height: .5em;
+}
+
+.footer > div {
   display: flex;
   flex-direction: column;
+  line-height: 2em;
 }
 
 .icons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
 
 #twitter {
   width: 50px;
+  margin-left: 20px;
 }
 
 #instagram {
   width: 50px;
+  margin-left: 20px;
 }
 
 #facebook {
@@ -319,5 +327,35 @@ a:active {
   }
   .carCost {
    font-size: .65em;
+  }
+  #title {
+    font-size: calc(1vw + .35rem);
+  }
+  
+  .main {
+    font-size: calc(3vw + .35rem);
+  }
+}
+
+@media (max-width: 600px){
+  #twitter {
+    width: 25px;
+    margin-left: 10px;
+  }
+  
+  #instagram {
+    width: 25px;
+    margin-left: 10px;
+  }
+  
+  #facebook {
+    width: 25px;
+  }
+  .footer {
+    font-size: calc(.5vw + .5rem);
+    line-height: 1em;
+  }
+  h1 {
+    font-size: 1.5em;
   }
 }
