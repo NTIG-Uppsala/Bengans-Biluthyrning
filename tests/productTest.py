@@ -26,7 +26,7 @@ openHours = {
 }
 
 contactInfo = ["Fjällgatan 32H,\\s+981 39 Jönköping",
-               "0630-555[- ]555", "\\w+@[\\w<>]+"]
+               "0630-555[- ]555", "info.bengans@gmail.com"]
 
 products = {
         "Audi A6",
