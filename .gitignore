@@ -1,0 +1,4 @@
+.pytest_cache/
+*logs/
+__pycache__/
+basic_test_info.txt
