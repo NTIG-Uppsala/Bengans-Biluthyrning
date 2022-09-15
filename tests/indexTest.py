@@ -19,6 +19,7 @@ socialMediaPaths = ["src/images/svg/facebookIcon.svg", "src/images/svg/twitterIc
                     "src/images/svg/instagramIcon.svg"]  # Paths for different social media .svg imgs
 
 # Make these more flexible
+# openHours = ["Vardagar[\\s:]+10[:.]?0{0, 2} ?- ?16[:.]?0{0, 2}", "Lördagar[\\s:]+12[:.]?0{0, 2} ?- ?15[:.]?0{0, 2}", "Söndagar[\\s:]+Stängt"]
 openHours = {
     "Vardagar:": "10-16",
     "Lördagar:": "12-15",
@@ -73,13 +74,13 @@ class header(BaseCase):
 
     def testMenu(self):
         self.open(startPage)
-        self.assert_element("#header > a[href=\"products.html\"]")
+        self.assert_element("#header a[href=\"products.html\"]")
 
     def testLogo(self):
         self.open(startPage)
         # self.assert_element(
         #    "#header > a[\"href=index.html\"] > [src=\"src/images/svg/logo.svg\"]")
-        self.assert_element("#header > [src=\"src/images/svg/logo.svg\"]")
+        self.assert_element("#header [src=\"src/images/svg/logo.svg\"]")
 
 
 # Categories in the backlog are represented as classes, every item in the backlog has its own test

@@ -79,13 +79,13 @@ class header(BaseCase):
 
     def testMenu(self):
         self.open(productPage)
-        self.assert_element("#header > a[href=\"index.html\"]")
+        self.assert_element("#header a[href=\"index.html\"]")
     
     def testLogo(self):
         self.open(productPage)
         #self.assert_element(
         #    "#header > a[\"href=index.html\"] > [src=\"src/images/svg/logo.svg\"]")
-        self.assert_element("#header > [src=\"src/images/svg/logo.svg\"]")
+        self.assert_element("#header [src=\"src/images/svg/logo.svg\"]")
     
 class products(BaseCase):
     def testProducts(self):
