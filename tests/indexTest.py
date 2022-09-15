@@ -33,6 +33,10 @@ class workingWebsite(BaseCase):
     def testTitle(self):
         self.open(startPage)
         self.assert_title("Bengans Biluthyrning")
+    
+    def testBackground(self):
+        self.open(startPage)
+        self.assert_element(".backgroundImage")
 
 
 class footer(BaseCase):
