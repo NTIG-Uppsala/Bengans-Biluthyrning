@@ -40,25 +40,13 @@ a:active {
   z-index: 9999;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
 }
 
 #header > div {
-  margin: 10px auto 10px auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-#produkter {
-  font-size: calc(1vw + .5rem);
-}
-
-#produkter:hover {
-  color: #6675ff;
+  margin: 25px;
 }
 
 #logo {
@@ -136,7 +124,7 @@ a:active {
 
 #rentButton:hover {
   cursor: pointer;
-  background-color: #6675ff;
+  background-color: red;
 }
 
 .footer {
@@ -207,13 +195,16 @@ a:active {
   flex-direction: column;
 }
 
+.productsMainFlex > div:hover {
+  box-shadow: 5px 5px 20px gray;
+  cursor: pointer;
+} 
+
 .cardImage {
   width: 100%;
   height: 50%;
   border-radius: 25px 25px 0px 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: red;
 }
 
 .cardText {
@@ -239,45 +230,6 @@ a:active {
 
 .carCost {
   font-size: 2em;
-}
-
-#audiA6 {
-  background-image: url(../images/products/audiA6.jpg);
-}
-
-#renaultKadjar {
-  background-image: url(../images/svg/missingProduct.svg);
-  background-size: 50%;
-}
-
-#subaruOutback {
-  background-image: url(../images/products/subaruOutback.jpg);
-}
-
-#cadillacEscalade {
-  background-image: url(../images/products/cadillacEscalade.jpg);
-}
-
-#mitsubishiOutlander {
-  background-image: url(../images/products/mitsubishiOutlander.jpg);
-}
-
-#volvoXC40 {
-  background-image: url(../images/products/volvoXC40.jpg);
-}
-
-#vwPolo {
-  background-image: url(../images/products/vwPolo.jpg);
-}
-
-#kiaCarens {
-  background-image: url(../images/svg/missingProduct.svg);
-  background-size: 50%;
-}
-
-#kiaSoul {
-  background-image: url(../images/svg/missingProduct.svg);
-  background-size: 50%;
 }
 
 @media (orientation: portrait) {
