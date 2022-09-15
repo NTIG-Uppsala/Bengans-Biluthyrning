@@ -127,7 +127,7 @@ a:active {
   background-color: red;
 }
 
-#footer {
+.footer {
   height: auto;
   width: 100vw;
   background-color: #f5f5f5;
@@ -145,20 +145,7 @@ a:active {
 }
 
 #productsFooter {
-  height: auto;
-  width: 100vw;
-  background-color: #f5f5f5;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  font-size: calc(1vw + .5rem);;
-  padding: 50px 0px 50px 0px;
-  line-height: 1.5em;
-  border-radius: 10px 10px 0px 0px;
-  position: absolute;
-  top: 100vh;
+  top: auto;
 }
 
 #footer > div {
@@ -184,9 +171,105 @@ a:active {
   width: 50px;
 }
 
+.productsMain {
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+}
+
+.productsMainFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 15vh;
+}
+
+.productsMainFlex > div {
+  width: 500px;
+  height: 550px;
+  margin: 50px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.productsMainFlex > div:hover {
+  box-shadow: 5px 5px 20px gray;
+  cursor: pointer;
+} 
+
+.cardImage {
+  width: 100%;
+  height: 50%;
+  border-radius: 25px 25px 0px 0px;
+  background-color: red;
+}
+
+.cardText {
+  width: 100%;
+  height: 50%;
+  border-radius: 0px 0px 25px 25px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.cardTextMargin {
+  margin: 15px;
+}
+
+.carName {
+  font-size: 2em;
+}
+
+.carType {
+  font-size: 1em;
+}
+
+.carCost {
+  font-size: 2em;
+}
+
 @media (orientation: portrait) {
   #rentButton {
     width: calc(10vh + 1rem);
     height: calc(8vw + .5rem)
+  }
+}
+
+@media (max-height: 800px){
+  .productsMainFlex > div {
+    width: 200px;
+    height: 250px;
+  }
+  .carName {
+    font-size: 1em;
+  }
+  .carType {
+    font-size: .75em;
+  }
+  .carCost {
+    font-size: 1em;
+  }
+}
+
+@media (max-height: 400px){
+  .productsMainFlex > div {
+    width: 100px;
+    height: 150px;
+  }
+  .cardTextMargin {
+    margin: 5px;
+  }
+  .carName {
+    font-size: .75em;
+  }
+  .carType {
+    font-size: .5em;
+  }
+  .carCost {
+   font-size: .65em;
   }
 }
