@@ -83,8 +83,6 @@ class header(BaseCase):
     
     def testLogo(self):
         self.open(productPage)
-        #self.assert_element(
-        #    "#header > a[\"href=index.html\"] > [src=\"src/images/svg/logo.svg\"]")
         self.assert_element("#header [src=\"src/images/svg/logo.svg\"]")
     
 class products(BaseCase):
@@ -92,8 +90,3 @@ class products(BaseCase):
         self.open(productPage)
         for i in productlist:
             self.assert_text(i)
-
-
-
-
-# Categories in the backlog are represented as classes, every item in the backlog has its own test
