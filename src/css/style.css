@@ -371,3 +371,12 @@ h1 {
     font-size: 1.5em;
   }
 }
+
+@media (orientation: portrait) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
