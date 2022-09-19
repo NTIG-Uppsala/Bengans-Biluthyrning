@@ -18,7 +18,7 @@ Google Chrome is used during testing.
 
 ## Python
 - Pip
-- Python requirements shown in [testRequirements.txt](tests/testsRequirements.txt), to install run `pip install -r ./tests/testsRequirements.txt`
+- Python requirements shown in [testRequirements.txt](tests/testsRequirements.txt), to install run `pip install -r ./tests/testRequirements.txt`
 
 # Code Validation:
 
