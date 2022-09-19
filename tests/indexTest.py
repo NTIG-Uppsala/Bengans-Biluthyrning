@@ -5,7 +5,7 @@ import re
 # To start the test, run "python -m pytest .\indexTest.py" in "\Bengans-Biluthyrning\tests"
 # or "python -m pytest .\tests\indexTest.py" in "\Bengans-Biluthyrning"
 
-# Find file path and prepare formatting
+# Find file path and prepare formatting, gets file, removes the last 5 characters
 filePath = "file://" + \
     str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
 
@@ -22,6 +22,7 @@ socialMediaPaths = ["src/images/svg/facebookIcon.svg", "src/images/svg/twitterIc
 # openHours = ["Vardagar[\\s:]+10[:.]?0{0, 2} ?- ?16[:.]?0{0, 2}",
              # "Lördagar[\\s:]+12[:.]?0{0, 2} ?- ?15[:.]?0{0, 2}",
              # "Söndagar[\\s:]+Stängt"]
+
 openHours = {
     "Vardagar:": "10-16",
     "Lördagar:": "12-15",
@@ -55,17 +56,21 @@ class footer(BaseCase):
     def testOpenHours(self):
         self.open(startPage)
         footerText = self.get_text(".footer")
+        # Matches footer text to regex regarding open hours
         for i in openHours:
             x = re.compile(f"{i}\\s+{openHours[i]}")
             if not x.search(footerText):
+                # Raises an error if correct text is not found
                 raise NameError(f"{i[:-1]} not correct")
 
     def testContactInfo(self):
         self.open(startPage)
         footerText = self.get_text(".footer")
+        # Matches footer text to regex contact info
         for i in contactInfo:
             x = re.compile(i)
             if not x.search(footerText):
+                # Raises an error if correct text is not found
                 raise NameError(f"{i} does not match found text.")
 
 
