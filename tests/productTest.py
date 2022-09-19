@@ -78,7 +78,8 @@ class header(BaseCase):
         self.assert_text("Bengans Biluthyrning", "#header")
 
     def testMenu(self):
-        self.open(productPage)
+        self.open(startPage)
+        self.assert_element("#header a[href=\"products.html\"]")
         self.assert_element("#header a[href=\"index.html\"]")
     
     def testLogo(self):

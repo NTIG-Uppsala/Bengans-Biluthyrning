@@ -77,7 +77,8 @@ class header(BaseCase):
     def testMenu(self):
         self.open(startPage)
         self.assert_element("#header a[href=\"products.html\"]")
-
+        self.assert_element("#header a[href=\"index.html\"]")
+        
     def testLogo(self):
         self.open(startPage)
         self.assert_element("#header [src=\"src/images/svg/logo.svg\"]")
