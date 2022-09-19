@@ -151,7 +151,6 @@ a:active {
   font-size: calc(1vw + .5rem);
   padding: 15px 0px 15px 0px;
   line-height: 1.5em;
-  border-radius: 10px 10px 0px 0px;
   position: absolute;
   top: 100vh;
 }
@@ -318,6 +317,7 @@ h1 {
   }
   .cardTextMargin {
     margin: 5px;
+    line-height: 10px;
   }
   .carName {
     font-size: .75em;
@@ -331,7 +331,6 @@ h1 {
   #title {
     font-size: calc(1vw + .35rem);
   }
-  
   .main {
     font-size: calc(3vw + .35rem);
   }
