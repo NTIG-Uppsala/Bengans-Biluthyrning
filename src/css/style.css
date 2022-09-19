@@ -228,12 +228,18 @@ h1 {
   height: 50%;
   border-radius: 0px 0px 25px 25px;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   text-align: start;
 }
 
+.cardText > div {
+  width: 100%;
+  height: 50%;
+}
+
 .cardTextMargin {
-  margin: 15px;
+  margin: 25px;
 }
 
 .carName {
@@ -246,6 +252,13 @@ h1 {
 
 .carCost {
   font-size: 2em;
+}
+
+.mailAdress {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 25px;
 }
 
 #audiA6 {
