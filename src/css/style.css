@@ -254,6 +254,23 @@ h1 {
   font-size: 2em;
 }
 
+.productButton {
+  height: 50px;
+  width: 150px;
+  border-radius: 15px;
+  border: 2px solid #7A87FF;
+  color: #7A87FF;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productButton:hover {
+  background-color: #7A87FF;
+  color: #ffffff;
+}
+
 .mailAdress {
   display: flex;
   justify-content: center;
