@@ -53,11 +53,11 @@ a:active {
   align-items: center;
 }
 
-#produkter {
+.menuItem {
   font-size: calc(1vw + .5rem);
 }
 
-#produkter:hover {
+.menuItem:hover {
   color: #6675ff;
 }
 
@@ -239,7 +239,7 @@ h1 {
 
 .cardTextMargin {
   padding: 25px;
-  width: calc(100%-50px);
+  width: calc(100% - 50px);
 }
 
 .carName {
