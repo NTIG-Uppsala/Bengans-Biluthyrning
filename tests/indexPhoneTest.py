@@ -81,9 +81,9 @@ class header(BaseCase):
 
     def testMenu(self):
         self.open(startPage)
-        #self.click("input")
-        self.assert_element("#menu a[href=\"products.html\"]")
-        self.assert_element("#menu a[href=\"index.html\"]")
+        self.click("label")
+        self.assert_element("nav a[href=\"products.html\"]")
+        self.assert_element("nav a[href=\"index.html\"]")
         
     def testLogo(self):
         self.open(startPage)

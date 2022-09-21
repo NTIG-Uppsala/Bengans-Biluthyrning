@@ -28,22 +28,24 @@ openHours = {
 contactInfo = ["Fjällgatan 32H,\\s+981 39 Jönköping",
                "0630-555[- ]555", "info.bengans@gmail.com"]
 
-productlist = [
-        "Audi A6",
-        "Renault Kadjar",
-        "Kia Soul",
-        "Subaru Outback",
-        "Cadillac Escalade",
-        "Mitsubishi Outlander",
-        "Volvo XC40",
-        "VW Polo",
-        "Kia Carens"
+productList = [
+    "Audi A6",
+    "Renault Kadjar",
+    "Kia Soul",
+    "Subaru Outback",
+    "Cadillac Escalade",
+    "Mitsubishi Outlander",
+    "Volvo XC40",
+    "VW Polo",
+    "Kia Carens"
 ]
+
 
 class workingWebsite(BaseCase):
     def testTitle(self):
         self.open(productPage)
         self.assert_title("Bengans Biluthyrning")
+
 
 class footer(BaseCase):
     def testSocials(self):
@@ -58,17 +60,21 @@ class footer(BaseCase):
     def testOpenHours(self):
         self.open(productPage)
         footerText = self.get_text(".footer")
+        # Matches footer text to regex regarding open hours
         for i in openHours:
             x = re.compile(f"{i}\\s+{openHours[i]}")
             if not x.search(footerText):
+                # Raises an error if correct text is not found
                 raise NameError(f"{i[:-1]} not correct")
 
     def testContactInfo(self):
         self.open(productPage)
         footerText = self.get_text(".footer")
+        # Matches footer text to regex contact info
         for i in contactInfo:
             x = re.compile(i)
             if not x.search(footerText):
+                # Raises an error if correct text is not found
                 raise NameError(f"{i} does not match found text.")
 
 
@@ -78,15 +84,18 @@ class header(BaseCase):
         self.assert_text("Bengans Biluthyrning", "#header")
 
     def testMenu(self):
-        self.open(productPage)
-        self.assert_element("#header a[href=\"index.html\"]")
-    
+        self.open(startPage)
+        self.assert_element("#menu a[href=\"products.html\"]")
+        self.assert_element("#menu a[href=\"index.html\"]")
+
     def testLogo(self):
         self.open(productPage)
         self.assert_element("#header [src=\"src/images/svg/logo.svg\"]")
-    
+
+
 class products(BaseCase):
     def testProducts(self):
         self.open(productPage)
-        for i in productlist:
+        # Looks for the items in productList
+        for i in productList:
             self.assert_text(i)
