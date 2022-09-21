@@ -174,14 +174,11 @@ a:active {
   top: auto;
 }
 
-h1 {
-  line-height: .5em;
-}
-
 .footer > div {
   display: flex;
   flex-direction: column;
   line-height: 2em;
+  margin: 20px;
 }
 
 .icons {
@@ -477,85 +474,18 @@ nav {
 }
 
 @media (orientation: portrait) {
-  #rentButton {
-    width: calc(10vh + 1rem);
-    height: calc(8vw + .5rem)
-  }
-}
-/*
-@media (max-height: 800px){
-  .productsMainFlex > div {
-    width: 200px;
-    height: 250px;
-  }
-  .carName {
-    font-size: 1em;
-  }
-  .carType {
-    font-size: .75em;
-  }
-  .carCost {
-    font-size: 1em;
-  }
-}
-
-@media (max-height: 400px){
-  .productsMainFlex > div {
-    width: 100px;
-    height: 150px;
-  }
-  .cardTextMargin {
-    margin: 5px;
-    line-height: 10px;
-  }
-  .carName {
-    font-size: .75em;
-  }
-  .carType {
-    font-size: .5em;
-  }
-  .carCost {
-   font-size: .65em;
-  }
-  #title {
-    font-size: calc(1vw + .35rem);
-  }
-  .main {
-    font-size: calc(3vw + .35rem);
-  }
-}*/
-
-@media (max-width: 600px){
-  #twitter {
-    width: 25px;
-    margin-left: 10px;
-  }
-  
-  #instagram {
-    width: 25px;
-    margin-left: 10px;
-  }
-  
-  #facebook {
-    width: 25px;
-  }
   .footer {
-    font-size: calc(.5vw + .5rem);
-    line-height: 1em;
-  }
-  h1 {
-    font-size: 1.5em;
-  }
-}
-
-@media (orientation: portrait) {
-  .footer {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
 
+  #rentButton {
+    width: calc(10vh + 1rem);
+    height: calc(8vw + .5rem)
+  }
+  
   .productsMainFlex {
     padding-top: 5vh;
   }
@@ -576,12 +506,6 @@ nav {
     display: inline-block;
   }
 
-  /*
-  .productsMainFlex > div {
-    width: 90vw;
-    height: 250px;
-  }
-  */
 }
 
 @media (max-width: 1200px){
@@ -592,9 +516,19 @@ nav {
 
 @media (max-width: 750px){
   .productsMainFlex > div {
-    width: 90vw;
+    width: 80vw;
+    height: 50vh;
+    font-size: .5em;
+  }
+  .productButton {
+    width: 100px; 
+    height: 35px
   }
 }
 
-
-
+@media (max-width: 300px){
+  .cardTextMargin {
+    padding: 10px;
+    width: 100%;
+  }
+}
