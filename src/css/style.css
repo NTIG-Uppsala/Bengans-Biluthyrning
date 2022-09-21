@@ -517,7 +517,8 @@ nav {
 @media (max-width: 750px){
   .productsMainFlex > div {
     width: 80vw;
-    height: 50vh;
+    min-height: 50vh;
+    max-height: 350px;
     font-size: .5em;
   }
   .productButton {
