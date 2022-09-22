@@ -67,7 +67,7 @@ a:active {
 }
 
 .menuItem {
-  font-size: calc(1vw + .5rem);
+  font-size: 2em;
 }
 
 .menuItem:hover {
@@ -82,20 +82,20 @@ a:active {
 }
 
 #title {
-  font-size: calc(2vw + .5rem);
+  font-size: 3em;
   font-weight: bold;
   margin-left: 25px;
 }
 
 .main {
   width: 100vw;
-  height: 101vh;
+  height: 100vh;
   background-color: rgb(0, 0, 0, 0.6);
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-size: calc(6vw + .5rem);
+  font-size: 8em;
   overflow: hidden;
 }
 
@@ -110,7 +110,7 @@ a:active {
 
 .backgroundImage {
   width: 100vw;
-  height: 101vh;
+  height: 100vh;
   background-image: url(../images/homepageImage.jpg);
   background-size: cover;
   background-position: center top;
@@ -136,11 +136,11 @@ a:active {
 }
 
 #rentButton {
-  width: calc(10vw + 1rem);
-  height: calc(6vh + .5rem);
-  border-radius: calc((8vh + .5rem)/4);
+  width: 250px;
+  height: 100px;
+  border-radius: 25px;
   background-color: #7A87FF;
-  font-size: calc(10% + .5rem);
+  font-size: .3em;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -163,7 +163,7 @@ a:active {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  font-size: calc(1vw + .5rem);
+  font-size: 2em;
   padding: 15px 0px 15px 0px;
   line-height: 1.5em;
   position: absolute;
@@ -506,17 +506,12 @@ nav {
   display: none;
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait), (max-width: 510px), (max-height: 400px) {
   .footer {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-
-  #rentButton {
-    width: calc(10vh + 1rem);
-    height: calc(8vw + .5rem)
   }
   
   .productsMainFlex {
@@ -539,7 +534,44 @@ nav {
     display: inline-block;
   }
 
+  .icons {
+    justify-content: center;
+  }
+
 }
+
+@media (max-height: 1050px), (max-width: 1050px) {
+  body {
+    font-size: .5em;
+  }
+  .productsMainFlex > div {
+    font-size: 2em;
+  }
+  #rentButton {
+    width: 125px;
+    height: 45px;
+  }
+}
+
+@media (max-height: 500px), (max-width: 500px) {
+  body {
+    font-size: .35em;
+  }
+  #rentButton {
+    width: 100px;
+    height: 35px;
+  }
+}   
+
+@media (max-width: 325px), (max-height: 300px) {
+  body {
+    font-size: .2em;
+  }
+  .productsMainFlex > div {
+    font-size: 3em;
+  }
+}
+
 
 @media (max-width: 1200px){
   .productsMainFlex > div {
@@ -551,18 +583,19 @@ nav {
   .productsMainFlex > div {
     width: 80vw;
     min-height: 50vh;
-    max-height: 350px;
-    font-size: .5em;
   }
   .productButton {
-    width: 100px; 
+    width: 125px; 
     height: 35px
   }
 }
 
-@media (max-width: 300px){
+@media (max-width: 350px){
   .cardTextMargin {
     padding: 10px;
     width: 100%;
+  }
+  .productsMainFlex > div {
+    max-height: 350px;
   }
 }
