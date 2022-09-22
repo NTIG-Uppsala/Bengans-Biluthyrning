@@ -540,7 +540,7 @@ nav {
 
 }
 
-@media (max-height: 1050px), (max-width: 1050px) {
+@media ((max-height: 1050px) or (max-width: 1050px)) {
   body {
     font-size: .5em;
   }
@@ -553,7 +553,7 @@ nav {
   }
 }
 
-@media (max-height: 500px), (max-width: 500px) {
+@media ((max-height: 500px) or (max-width: 500px)) {
   body {
     font-size: .35em;
   }
