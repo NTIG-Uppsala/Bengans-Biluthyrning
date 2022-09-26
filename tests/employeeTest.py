@@ -11,7 +11,7 @@ productPage = filePath + "products.html"  # Path to products.html
 
 employeePage = filePath + "employees.html"  # Path to employees.html
 
-emplyeeList = ["Anna Pettersson", "Fredrik Ortqvist", "Peter Johansson"]
+emplyeeList = ["Anna Pettersson", "Fredrik Örtqvist", "Peter Johansson"]
 
 
 class employees(BaseCase):
