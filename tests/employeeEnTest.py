@@ -5,19 +5,19 @@ import pathlib
 filePath = "file://" + \
     str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
 
-startPage = filePath + "index.html"  # Path to index.html
+startPage = filePath + "english/index.html"  # Path to index.html
 
-productPage = filePath + "products.html"  # Path to products.html
+productPage = filePath + "english/products.html"  # Path to products.html
 
-employeePage = filePath + "employees.html"  # Path to employees.html
+employeePage = filePath + "english/employees.html"  # Path to employees.html
 
 emplyeeList = ["Anna Pettersson", "Fredrik Örtqvist", "Peter Johansson"]
 
 class workingWebsite(BaseCase):
     def testTitle(self):
         self.open(productPage)
-        self.assert_title("Bengans Biluthyrning")
-        
+        self.assert_title("Bengan's Car Rentals")
+
 class employees(BaseCase):
     def testNames(self):
         self.open(employeePage)
