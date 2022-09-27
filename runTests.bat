@@ -6,11 +6,13 @@ start /b python -m pytest .\tests\footerTest.py --headless --settings-file=.\tes
 start /b python -m pytest .\tests\footerTest.py --headless --settings-file=.\tests\phoneSettings.py
 
 start /b python -m pytest .\tests\indexTest.py --headless --settings-file=.\tests\customSettings.py
-start /b python -m pytest .\tests\productTest.py --headless --settings-file=.\tests\customSettings.py
-start /b python -m pytest .\tests\employeeTest.py --headless --settings-file=.\tests\customSettings.py
-
 start /b python -m pytest .\tests\indexTest.py --headless --settings-file=.\tests\phoneSettings.py
+
+start /b python -m pytest .\tests\productTest.py --headless --settings-file=.\tests\customSettings.py
 start /b python -m pytest .\tests\productTest.py --headless --settings-file=.\tests\phoneSettings.py
+
+start /b python -m pytest .\tests\employeeTest.py --headless --settings-file=.\tests\customSettings.py
 start /b python -m pytest .\tests\employeeTest.py --headless --settings-file=.\tests\phoneSettings.py & pause
+
 :: python -m pytest .\tests\mainTest.py
 :: python -m pytest .\tests\mainTestCopy.py

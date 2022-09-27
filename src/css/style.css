@@ -45,12 +45,13 @@ a:active {
   flex-direction: row;
 }
 
-#header > div {
+/* #header > div {
   width : 50%;
-}
+} */
 
 #logoTitle {
   width: 100%;
+  height: 60px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -58,20 +59,21 @@ a:active {
 }
 
 #menu {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: flex-end;
 }
 
-#menu > div {
+/* #menu > div {
   width: auto;
   margin: auto;
-}
+} */
 
 .menuItem {
-  font-size: 2em;
+  font-size: 16px;
+  margin: 20px;
 }
 
 .menuItem:hover {
@@ -79,14 +81,12 @@ a:active {
 }
 
 #logo {
-  width: 8vw;
-  min-width: 42px;
-  min-height: 42px;
+  width: 70px;
   margin-left: 25px;
 }
 
 #title {
-  font-size: 3em;
+  font-size: 32px;
   font-weight: bold;
   margin-left: 15px;
 }
@@ -99,7 +99,7 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-size: 8em;
+  font-size: 64px;
   overflow: hidden;
 }
 
@@ -141,7 +141,7 @@ a:active {
 #rentButton {
   border-radius: 25px;
   background-color: #7A87FF;
-  font-size: .3em;
+  font-size: 38px;
   font-weight: bold;
   text-align: center;
   margin: auto;
@@ -162,7 +162,7 @@ a:active {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  font-size: 2em;
+  font-size: 16px;
   padding: 15px 0px 15px 0px;
   line-height: 1.5em;
   position: absolute;
@@ -236,26 +236,26 @@ a:active {
 
 .cardText {
   width: 100%;
-  height: 50%;
+  height: 25%;
   border-radius: 0px 0px 25px 25px;
   text-align: start;
   padding: 25px;
 }
 
-.cardText > div {
+/* .cardText > div {
   height: 50%;
-}
+} */
 
 .carName {
-  font-size: 2em;
+  font-size: 32px;
 }
 
 .carType {
-  font-size: 1em;
+  font-size: 16px;
 }
 
 .carCost {
-  font-size: 2em;
+  font-size: 32px;
 }
 
 .productButton {
@@ -274,6 +274,7 @@ a:active {
 .mailAdress {
   margin-bottom: 25px;
   width: 100%;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,7 +360,7 @@ nav {
 
 .container {
   max-width: 1050px;
-  width: 100%;
+  width: 60px;
   margin: auto;
   position: absolute;
   left: 0;
@@ -489,12 +490,16 @@ nav {
   display: none;
 }
 
-@media(max-width: 510px){
+@media(max-width: 700px){
   .footer {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .main {
+    font-size: xx-large;
   }
   
   .productsMainFlex {
@@ -509,8 +514,17 @@ nav {
     display: none;
   }
 
-  #logoTitle {
-    margin-left: -50px;
+  #title {
+    font-size: medium;
+  }
+
+  #logo {
+    margin-left: 0px;
+    width: 42px;
+  }
+
+  #slogan {
+    margin-top: 10px;
   }
 
   nav {
@@ -519,6 +533,12 @@ nav {
 
   .icons {
     justify-content: center;
+  }
+
+  #rentButton {
+    font-size: x-large;
+    border-radius: 15px;
+    padding: 10px;
   }
 
 }
