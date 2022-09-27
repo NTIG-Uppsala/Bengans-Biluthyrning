@@ -17,8 +17,8 @@ pages = [startPage, productPage, employeePage]
 
 socialLinks = ["https://sv-se.facebook.com/ntiuppsala/", "https://twitter.com/ntiuppsala/",
                "https://www.instagram.com/ntiuppsala/"]  # Relevant social media links
-socialMediaPaths = ["src/images/svg/facebookIcon.svg", "src/images/svg/twitterIcon.svg",
-                    "src/images/svg/instagramIcon.svg"]  # Paths for different social media .svg imgs
+socialMediaPaths = ["../src/images/svg/facebookIcon.svg", "../src/images/svg/twitterIcon.svg",
+                    "../src/images/svg/instagramIcon.svg"]  # Paths for different social media .svg imgs
 
 # This is more accepting, but less human-readable and therefore not currently used
 # openHours = ["Vardagar[\\s:]+10[:.]?0{0, 2} ?- ?16[:.]?0{0, 2}",

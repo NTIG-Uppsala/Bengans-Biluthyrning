@@ -42,4 +42,4 @@ class header(BaseCase):
         # Find logo in every header
         for i in pages:
             self.open(i)
-            self.assert_element("#header [src=\"src/images/svg/logo.svg\"]")
+            self.assert_element("#header [src=\"../src/images/svg/logo.svg\"]")
