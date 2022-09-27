@@ -15,6 +15,7 @@ body {
 }
 
 a:link {
+  color: inherit;
   text-decoration: inherit;
 }
 
