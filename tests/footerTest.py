@@ -74,7 +74,6 @@ class footer(BaseCase):
     def testLinks(self):
         for i in pages:
             self.open(i)
-            footerText = self.get_text(".footer")
 
-            self.assert_element( '#contact  a/href="tel:0630555555"')
-            self.assert_element('#contact  a/href="mailto:info.bengans@gmail.com"')
+            self.assert_element('.contact[href=\"tel:0630555555\"]')
+            self.assert_element('.contact[href=\"mailto:info.bengans@gmail.com\"]')
