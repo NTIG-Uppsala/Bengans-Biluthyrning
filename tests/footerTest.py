@@ -70,3 +70,11 @@ class footer(BaseCase):
                 if not x.search(footerText):
                     # Raises an error if correct text is not found
                     raise NameError(f"{j} does not match found text.")
+
+    def testLinks(self):
+        for i in pages:
+            self.open(i)
+            footerText = self.get_text(".footer")
+
+            self.assert_element( '#contact  a/href="tel:0630555555"')
+            self.assert_element('#contact  a/href="mailto:info.bengans@gmail.com"')

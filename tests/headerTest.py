@@ -22,7 +22,7 @@ class header(BaseCase):
             self.assert_text("Bengans Biluthyrning", "#header")
 
     def testMenu(self):
-        # Fin the menu links, in <nav> if a burger menu is clickable, otherwise in #menu
+        # Find the menu links, in <nav> if a burger menu is clickable, otherwise in #menu
         for i in pages:
             self.open(i)
             try:
