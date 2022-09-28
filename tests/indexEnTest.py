@@ -5,7 +5,7 @@ import pathlib
 filePath = "file://" + \
     str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
 
-startPage = filePath + "english/index.html"  # Path to english index.html
+startPage = filePath + "EN/index.html"  # Path to english index.html
 
 class workingWebsite(BaseCase):
     def testTitle(self):

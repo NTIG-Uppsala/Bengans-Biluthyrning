@@ -5,7 +5,7 @@ import pathlib
 filePath = "file://" + \
     str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
 
-productPage = filePath + "english/products.html"  # Path to products.html
+productPage = filePath + "EN/products.html"  # Path to products.html
 
 productList = [
     "Audi A6",

@@ -7,9 +7,9 @@ filePath = "file://" + \
 
 startPage = filePath + "index.html"  # Path to index.html
 
-productPage = filePath + "products.html"  # Path to products.html
+productPage = filePath + "produkter.html"  # Path to products.html
 
-employeePage = filePath + "employees.html" # Path to employees.html
+employeePage = filePath + "personal.html" # Path to employees.html
 
 pages = [startPage, productPage, employeePage]
 
@@ -29,14 +29,14 @@ class header(BaseCase):
                 self.click("label", timeout=1)
             except:
                 # Activates if there is no burger menu
-                self.assert_element("#menu a[href=\"products.html\"]")
+                self.assert_element("#menu a[href=\"produkter.html\"]")
                 self.assert_element("#menu a[href=\"index.html\"]")
-                self.assert_element("#menu a[href=\"employees.html\"]")
+                self.assert_element("#menu a[href=\"personal.html\"]")
             else:
                 # Activates if there is a burger menu
-                self.assert_element("nav a[href=\"products.html\"]")
+                self.assert_element("nav a[href=\"produkter.html\"]")
                 self.assert_element("nav a[href=\"index.html\"]")
-                self.assert_element("nav a[href=\"employees.html\"]")
+                self.assert_element("nav a[href=\"personal.html\"]")
 
     def testLogo(self):
         # Find logo in every header

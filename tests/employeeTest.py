@@ -7,9 +7,9 @@ filePath = "file://" + \
 
 startPage = filePath + "index.html"  # Path to index.html
 
-productPage = filePath + "products.html"  # Path to products.html
+productPage = filePath + "produkter.html"  # Path to products.html
 
-employeePage = filePath + "employees.html"  # Path to employees.html
+employeePage = filePath + "personal.html"  # Path to employees.html
 
 emplyeeList = ["Anna Pettersson", "Fredrik Örtqvist", "Peter Johansson"]
 

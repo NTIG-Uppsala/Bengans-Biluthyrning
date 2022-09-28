@@ -5,11 +5,11 @@ import pathlib
 filePath = "file://" + \
     str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
 
-startPage = filePath + "english/index.html"  # Path to index.html
+startPage = filePath + "EN/index.html"  # Path to index.html
 
-productPage = filePath + "english/products.html"  # Path to products.html
+productPage = filePath + "EN/products.html"  # Path to products.html
 
-employeePage = filePath + "english/employees.html" # Path to employees.html
+employeePage = filePath + "EN/staff.html" # Path to employees.html
 
 pages = [startPage, productPage, employeePage]
 
@@ -29,14 +29,14 @@ class header(BaseCase):
                 self.click("label", timeout=1)
             except:
                 # Activates if there is no burger menu
-                self.assert_element("#menu a[href=\"products.html\"]")
-                self.assert_element("#menu a[href=\"index.html\"]")
-                self.assert_element("#menu a[href=\"employees.html\"]")
+                self.assert_element("#menu a[href=\"../EN/products.html\"]")
+                self.assert_element("#menu a[href=\"../EN/index.html\"]")
+                self.assert_element("#menu a[href=\"../EN/staff.html\"]")
             else:
                 # Activates if there is a burger menu
-                self.assert_element("nav a[href=\"products.html\"]")
-                self.assert_element("nav a[href=\"index.html\"]")
-                self.assert_element("nav a[href=\"employees.html\"]")
+                self.assert_element("nav a[href=\"../EN/products.html\"]")
+                self.assert_element("nav a[href=\"../EN/index.html\"]")
+                self.assert_element("nav a[href=\"../EN/staff.html\"]")
 
     def testLogo(self):
         # Find logo in every header
