@@ -70,6 +70,13 @@ a:active {
   color: #6675ff;
 }
 
+.flag {
+  margin: 10px;
+  margin-right: 20px;
+  height: 40px;
+  width: 64px;
+}
+
 #logo {
   width: 70px;
   margin-left: 25px;
@@ -529,6 +536,10 @@ nav {
     font-size: x-large;
     border-radius: 15px;
     padding: 10px;
+  }
+
+  .flag {
+    margin: 0px;
   }
 
 }
