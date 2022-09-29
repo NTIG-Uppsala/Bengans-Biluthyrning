@@ -11,7 +11,7 @@ productPage = filePath + "EN/products.html"  # Path to products.html
 
 employeePage = filePath + "EN/staff.html"  # Path to employees.html
 
-emplyeeList = ["Anna Pettersson", "Fredrik Örtqvist", "Peter Johansson"]
+employeeList = ["Anna Pettersson", "Fredrik Örtqvist", "Peter Johansson"]
 
 class workingWebsite(BaseCase):
     def testTitle(self):
@@ -21,5 +21,5 @@ class workingWebsite(BaseCase):
 class employees(BaseCase):
     def testNames(self):
         self.open(employeePage)
-        for i in emplyeeList:
+        for i in employeeList:
             self.assert_text(i)
