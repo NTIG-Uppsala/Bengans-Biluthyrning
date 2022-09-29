@@ -369,9 +369,9 @@ nav {
 
 .nav-container {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
-  height: 62px;
 }
 
 .navbar .menu-items {
@@ -393,12 +393,6 @@ nav {
 .navbar .nav-container a:hover{
   font-weight: bold;
   text-decoration: underline;
-}
-
-.nav-container {
-  display: block;
-  position: relative;
-  height: 60px;
 }
 
 .nav-container .checkbox {
@@ -449,11 +443,13 @@ nav {
 }
 
 .navbar .menu-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 64px;
   background-color: #7A87FF;
-  padding-top: 120px;
-  margin-top: -2em;
-  height: 101vh;
-  width: 2000%;
+  width: 100vw;
+  height: 100vh;
   transform: translate(-150%);
   display: flex;
   flex-direction: column;
