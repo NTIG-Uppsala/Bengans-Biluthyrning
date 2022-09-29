@@ -13,6 +13,14 @@ employeePage = filePath + "personal.html" # Path to employees.html
 
 pages = [startPage, productPage, employeePage]
 
+startPageEN = "EN/index.html"  # Path to index.html
+
+productPageEN = "EN/products.html"  # Path to products.html
+
+employeePageEN = "EN/staff.html" # Path to employees.html
+
+pagesEN = [startPageEN, productPageEN, employeePageEN]
+
 
 class header(BaseCase):
     def testName(self):
@@ -43,3 +51,16 @@ class header(BaseCase):
         for i in pages:
             self.open(i)
             self.assert_element("#header [src=\"src/images/svg/logo.svg\"]")
+
+    
+    def testbutton(self):
+        for i in range(len(pages)):
+            self.open(pages[i])
+            try:
+                self.click("label", timeout=5)
+            except:
+                # Activates if there is no burger menu
+                self.assert_element('#menu a[href=\"'+pagesEN[i]+'\"]')
+            else:
+                # Activates if there is a burger menu
+                self.assert_element('nav a[href=\"'+pagesEN[i]+'\"]')
