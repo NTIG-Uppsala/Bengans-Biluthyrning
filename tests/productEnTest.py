@@ -8,15 +8,15 @@ filePath = "file://" + \
 productPage = filePath + "EN/products.html"  # Path to products.html
 
 productList = [
-    "Audi A6",
-    "Renault Kadjar",
-    "Kia Soul",
-    "Subaru Outback",
-    "Cadillac Escalade",
-    "Mitsubishi Outlander",
-    "Volvo XC40",
-    "VW Polo",
-    "Kia Carens"
+    ["audiA6","audiA6.jpg", "Audi A6", "Automatic", "800 kr/day"], 
+    ["renaultKadjar", None, "Renault Kadjar", "Automatic", "450 kr/day"],
+    ["kiaSoul", None, "Kia Soul", "Manual", "400 kr/day"],
+    ["subaruOutback","subaruOutback.jpg", "Subaru Outback", "Manual", "300 kr/day"],
+    ["cadillacEscalade","cadillacEscalade.jpg", "Cadillac Escalade", "Manual", "500 kr/day"],
+    ["mitsubishiOutlander","mitsubishiOutlander.jpg", "Mitsubishi Outlander", "Manual", "450 kr/day"],
+    ["volvoXC40","volvoXC40.jpg", "Volvo XC40", "Automatic", "800 kr/day"],
+    ["vwPolo","vwPolo.jpg", "VW Polo", "Manual", "300 kr/day"],
+    ["kiaCarens", None, "Kia Carens", "Manual", "500 kr/day"]
 ]
 
 class workingWebsite(BaseCase):
@@ -28,5 +28,9 @@ class products(BaseCase):
     def testProducts(self):
         self.open(productPage)
         # Looks for the items in productList
-        for i in productList:
-            self.assert_text(i)
+        for i in productList:    
+            self.assert_text(i[2], "#"+i[0])
+            self.assert_text(i[3], "#"+i[0])
+            self.assert_text(i[4], "#"+i[0])
+            if i[1] != None:
+                self.assert_element("#"+i[0]+' .cardImage[src="../src/images/products/'+i[1]+'"]')
