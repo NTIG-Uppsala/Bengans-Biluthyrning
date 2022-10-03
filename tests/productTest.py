@@ -8,15 +8,15 @@ filePath = "file://" + \
 productPage = filePath + "produkter.html"  # Path to products.html
 
 productList = [
-    "Audi A6",
-    "Renault Kadjar",
-    "Kia Soul",
-    "Subaru Outback",
-    "Cadillac Escalade",
-    "Mitsubishi Outlander",
-    "Volvo XC40",
-    "VW Polo",
-    "Kia Carens"
+    ["audiA6","audiA6.jpg", "Audi A6", "Automat", "800"], 
+    ["renaultKadjar","renaultKadjar.jpg", "Renault Kadjar", "Automat", "450"],
+    ["kiaSoul","kiaSoul.jpg", "Kia Soul", "Manuell", "400"],
+    ["subaruOutback","subaruOutback.jpg", "Subaru Outback", "Manuell", "300"],
+    ["cadillacEscalade","cadillacEscalade.jpg", "Cadillac Escalade", "Manuell", "500"],
+    ["mitsubishiOutlander","mitsubishiOutlander.jpg", "Mitsubishi Outlander", "Manuell", "450"],
+    ["volvoXC40","volvoXC40.jpg", "Volvo XC40", "Automat", "800"],
+    ["vwPolo","vwPolo.jpg", "VW Polo", "Manuell", "300"],
+    ["kiaCarens","kiaCarens.jpg", "Kia Carens", "Manuell", "500"]
 ]
 
 
@@ -30,4 +30,7 @@ class products(BaseCase):
         self.open(productPage)
         # Looks for the items in productList
         for i in productList:
-            self.assert_text(i)
+            self.assert_element(i)
+
+for i in productList:
+    print(i)
