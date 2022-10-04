@@ -15,3 +15,12 @@ class workingWebsite(BaseCase):
     def testBackground(self):
         self.open(startPage)
         self.assert_element(".backgroundImage")
+
+    def testSlogan(self):
+        self.open(startPage)
+        self.assert_text("Nice Cars")
+        self.assert_text("Nicer Prices")
+
+    def testButton(self):
+        self.open(startPage)
+        self.assert_element(".main a[href=\"products.html\"]")
