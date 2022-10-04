@@ -33,4 +33,4 @@ class products(BaseCase):
             self.assert_text(i[3], "#"+i[0])
             self.assert_text(i[4], "#"+i[0])
             if i[1] != None:
-                self.assert_element("#"+i[0]+' .cardImage[src="../src/images/products/'+i[1]+'"]')
+                self.assert_element("#"+i[0]+' .cardImage img[src="../src/images/products/'+i[1]+'"]')
