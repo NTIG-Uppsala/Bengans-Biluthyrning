@@ -26,13 +26,14 @@ socialMediaPaths = ["src/images/svg/facebookIcon.svg", "src/images/svg/twitterIc
 # "Söndagar[\\s:]+Stängt"]
 
 openHours = {
+    "Öppettider": "",
     "Vardagar:": "10-16",
     "Lördagar:": "12-15",
     "Söndagar:": "Stängt"
 }
 
-contactInfo = ["Fjällgatan 32H,?\\s+981 39\\s+Jönköping",
-               "0630-555[- ]555", "info.bengans@gmail.com"]
+contactInfo = ["Adress", "Fjällgatan 32H,?\\s+981 39\\s+Jönköping",
+               "Kontakt", "0630-555[- ]555", "info.bengans@gmail.com"]
 
 
 class footer(BaseCase):
