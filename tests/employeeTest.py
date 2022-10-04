@@ -12,9 +12,9 @@ productPage = filePath + "produkter.html"  # Path to products.html
 employeePage = filePath + "personal.html"  # Path to employees.html
 
 employeeList = [
-    ["AnnaPettersson","anna_pettersson.jpg","Anna Pettersson", "VD"], 
-    ["FredrikOrtqvist","fredrik_ortqvist.jpg", "Fredrik Örtqvist", "Kundservice"], 
-    ["PeterJohansson","peter_johansson.jpg", "Peter Johansson","Kundservice"]
+    ["annaPettersson","anna_pettersson.jpg","Anna Pettersson", "VD"], 
+    ["fredrikOrtqvist","fredrik_ortqvist.jpg", "Fredrik Örtqvist", "Kundservice"], 
+    ["peterJohansson","peter_johansson.jpg", "Peter Johansson","Kundservice"]
 ]
 
 class workingWebsite(BaseCase):
