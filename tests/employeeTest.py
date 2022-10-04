@@ -11,15 +11,23 @@ productPage = filePath + "produkter.html"  # Path to products.html
 
 employeePage = filePath + "personal.html"  # Path to employees.html
 
-employeeList = ["Anna Pettersson", "Fredrik Örtqvist", "Peter Johansson"]
+employeeList = [
+    ["AnnaPettersson","anna_pettersson.jpg","Anna Pettersson", "VD"], 
+    ["FredrikOrtqvist","fredrik_ortqvist.jpg", "Fredrik Örtqvist", "Kundservice"], 
+    ["PeterJohansson","peter_johansson.jpg", "Peter Johansson","Kundservice"]
+]
 
 class workingWebsite(BaseCase):
     def testTitle(self):
         self.open(productPage)
         self.assert_title("Bengans Biluthyrning")
-        
+
 class employees(BaseCase):
     def testNames(self):
         self.open(employeePage)
         for i in employeeList:
-            self.assert_text(i)
+            self.assert_text(i[2], "#"+i[0])
+            self.assert_text(i[3], "#"+i[0])
+            self.assert_text(i[4], "#"+i[0])
+            if i[1] != None:
+                self.assert_element("#"+i[0]+' .cardImage img[src="src/images/personal/'+i[1]+'"]')
