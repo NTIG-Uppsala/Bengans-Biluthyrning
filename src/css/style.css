@@ -226,6 +226,15 @@ a:active {
   flex-direction: column;
 }
 
+.staffCard {
+  width: 500px;
+  height: 45%;
+  margin: 50px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px gray;
+  display: flex;
+  flex-direction: column;
+}
 .cardText {
   width: 100%;
   height: 25%;
@@ -288,10 +297,17 @@ a:active {
 
 .cardImage2 {
   width: 100%;
-  height: 75%;
+  height: 80%;
   border-radius: 25px 25px 0px 0px;
   background-repeat: no-repeat;
   background-position: center 0px;
+}
+
+.cardImage2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 25px 25px 0px 0px;
 }
 
 .cardText2 {
@@ -507,5 +523,7 @@ nav {
   .flag {
     margin: 0px;
   }
-
+  .carCost {
+    font-size: 16px;
+  }
 }

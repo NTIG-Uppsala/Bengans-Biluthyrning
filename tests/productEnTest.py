@@ -8,15 +8,15 @@ filePath = "file://" + \
 productPage = filePath + "EN/products.html"  # Path to products.html
 
 productList = [
-    ["audiA6","audiA6.jpg", "Audi A6", "Automatic", "800 kr/day"], 
-    ["renaultKadjar", None, "Renault Kadjar", "Automatic", "450 kr/day"],
-    ["kiaSoul", None, "Kia Soul", "Manual", "400 kr/day"],
-    ["subaruOutback","subaruOutback.jpg", "Subaru Outback", "Manual", "300 kr/day"],
-    ["cadillacEscalade","cadillacEscalade.jpg", "Cadillac Escalade", "Manual", "500 kr/day"],
-    ["mitsubishiOutlander","mitsubishiOutlander.jpg", "Mitsubishi Outlander", "Manual", "450 kr/day"],
-    ["volvoXC40","volvoXC40.jpg", "Volvo XC40", "Automatic", "800 kr/day"],
-    ["vwPolo","vwPolo.jpg", "VW Polo", "Manual", "300 kr/day"],
-    ["kiaCarens", None, "Kia Carens", "Manual", "500 kr/day"]
+    ["audiA6","audiA6.jpg", "Audi A6", "Automatic", "800 SEK per day"], 
+    ["renaultKadjar", None, "Renault Kadjar", "Automatic", "450 SEK per day"],
+    ["kiaSoul", None, "Kia Soul", "Manual", "400 SEK per day"],
+    ["subaruOutback","subaruOutback.jpg", "Subaru Outback", "Manual", "300 SEK per day"],
+    ["cadillacEscalade","cadillacEscalade.jpg", "Cadillac Escalade", "Manual", "500 SEK per day"],
+    ["mitsubishiOutlander","mitsubishiOutlander.jpg", "Mitsubishi Outlander", "Manual", "450 SEK per day"],
+    ["volvoXC40","volvoXC40.jpg", "Volvo XC40", "Automatic", "800 SEK per day"],
+    ["vwPolo","vwPolo.jpg", "VW Polo", "Manual", "300 SEK per day"],
+    ["kiaCarens", None, "Kia Carens", "Manual", "500 SEK per day"]
 ]
 
 class workingWebsite(BaseCase):

@@ -8,15 +8,15 @@ filePath = "file://" + \
 productPage = filePath + "produkter.html"  # Path to products.html
 
 productList = [
-    ["audiA6","audiA6.jpg", "Audi A6", "Automat", "800 kr/dygn"], 
-    ["renaultKadjar", None, "Renault Kadjar", "Automat", "450 kr/dygn"],
-    ["kiaSoul", None, "Kia Soul", "Manuell", "400 kr/dygn"],
-    ["subaruOutback","subaruOutback.jpg", "Subaru Outback", "Manuell", "300 kr/dygn"],
-    ["cadillacEscalade","cadillacEscalade.jpg", "Cadillac Escalade", "Manuell", "500 kr/dygn"],
-    ["mitsubishiOutlander","mitsubishiOutlander.jpg", "Mitsubishi Outlander", "Manuell", "450 kr/dygn"],
-    ["volvoXC40","volvoXC40.jpg", "Volvo XC40", "Automat", "800 kr/dygn"],
-    ["vwPolo","vwPolo.jpg", "VW Polo", "Manuell", "300 kr/dygn"],
-    ["kiaCarens", None, "Kia Carens", "Manuell", "500 kr/dygn"]
+    ["audiA6","audiA6.jpg", "Audi A6", "Automat", "800 kr per dygn"], 
+    ["renaultKadjar", None, "Renault Kadjar", "Automat", "450 kr per dygn"],
+    ["kiaSoul", None, "Kia Soul", "Manuell", "400 kr per dygn"],
+    ["subaruOutback","subaruOutback.jpg", "Subaru Outback", "Manuell", "300 kr per dygn"],
+    ["cadillacEscalade","cadillacEscalade.jpg", "Cadillac Escalade", "Manuell", "500 kr per dygn"],
+    ["mitsubishiOutlander","mitsubishiOutlander.jpg", "Mitsubishi Outlander", "Manuell", "450 kr per dygn"],
+    ["volvoXC40","volvoXC40.jpg", "Volvo XC40", "Automat", "800 kr per dygn"],
+    ["vwPolo","vwPolo.jpg", "VW Polo", "Manuell", "300 kr per dygn"],
+    ["kiaCarens", None, "Kia Carens", "Manuell", "500 kr per dygn"]
 ]
 
 
