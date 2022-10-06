@@ -3,13 +3,13 @@ import pathlib
 
 # Find file path and prepare formatting, gets file, removes the last 5 characters
 filePath = "file://" + \
-    str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
+    str(pathlib.Path(__file__).parent.resolve())[:-18].replace("\\", "/")
 
-startPage = filePath + "index.html"  # Path to index.html
+startPage = filePath + "jonkoping/sv/index.html"  # Path to index.html
 
-productPage = filePath + "produkter.html"  # Path to products.html
+productPage = filePath + "jonkoping/sv/produkter.html"  # Path to products.html
 
-employeePage = filePath + "personal.html"  # Path to employees.html
+employeePage = filePath + "jonkoping/sv/personal.html"  # Path to employees.html
 
 employeeList = [
     ["annaPettersson", "anna_pettersson.jpg","Anna Pettersson", "VD"], 
@@ -29,4 +29,4 @@ class employees(BaseCase):
             self.assert_text(i[2], "#"+i[0])
             self.assert_text(i[3], "#"+i[0])
             if i[1] != None:
-                self.assert_element("#"+i[0]+' .cardImage2 img[src="src/images/personal/'+i[1]+'"]')
+                self.assert_element("#"+i[0]+' .cardImage2 img[src="../../src/images/personal/'+i[1]+'"]')
