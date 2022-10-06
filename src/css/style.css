@@ -170,8 +170,42 @@ a:active {
   background-color: #6675ff;
 }
 
+.locations {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.locationButton {
+    color: white;
+    border-radius: 25px;
+    background-color: #7A87FF;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    border: none;
+}
+
+#address .locationButton {
+    font-size: 16px;
+}
+
+.locationButton:hover {
+    cursor: pointer;
+    background-color: #6675ff;
+}
+
+#locationmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: auto;
+}
+
 .footer {
-  height: 20vh;
+  min-height: 20vh;
   width: 100vw;
   background-color: #f5f5f5;
   color: black;
