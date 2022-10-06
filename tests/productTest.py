@@ -3,9 +3,9 @@ import pathlib
 
 # Find file path and prepare formatting
 filePath = "file://" + \
-    str(pathlib.Path(__file__).parent.resolve())[:-18].replace("\\", "/")
+    str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
 
-productPage = filePath + "jonkoping/sv/produkter.html"  # Path to products.html
+productPage = filePath + "produkter.html"  # Path to products.html
 
 productList = [
     ["audiA6","audiA6.jpg", "Audi A6", "Automat", "800 kr per dygn"], 
@@ -34,7 +34,7 @@ class products(BaseCase):
             self.assert_text(i[3], "#"+i[0])
             self.assert_text(i[4], "#"+i[0])
             if i[1] != None:
-                self.assert_element("#"+i[0]+' .cardImage img[src="../../src/images/products/'+i[1]+'"]')
+                self.assert_element("#"+i[0]+' .cardImage img[src="src/images/products/'+i[1]+'"]')
 
 
 # for i in productList:

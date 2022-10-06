@@ -1,5 +1,5 @@
 # Bengans-Biluthyrning
-Website for Bengans Biluthyrning.
+Website for Bengans Biluthyrning, created by the group "1/4 Finsk"
 ## [Link to live website](https://ntig-uppsala.github.io/Bengans-Biluthyrning/)
 
 # Programming Languages

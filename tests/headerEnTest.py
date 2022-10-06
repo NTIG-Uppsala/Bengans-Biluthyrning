@@ -3,13 +3,13 @@ import pathlib
 
 # Find file path and prepare formatting, gets file, removes the last 5 characters
 filePath = "file://" + \
-    str(pathlib.Path(__file__).parent.resolve())[:-18].replace("\\", "/")
+    str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
 
-startPage = filePath + "jonkoping/en/index.html"  # Path to index.html
+startPage = filePath + "EN/index.html"  # Path to index.html
 
-productPage = filePath + "jonkoping/en/products.html"  # Path to products.html
+productPage = filePath + "EN/products.html"  # Path to products.html
 
-employeePage = filePath + "jonkoping/en/staff.html" # Path to employees.html
+employeePage = filePath + "EN/staff.html" # Path to employees.html
 
 pages = [startPage, productPage, employeePage]
 
@@ -37,20 +37,20 @@ class header(BaseCase):
                 self.click("label", timeout=1)
             except:
                 # Activates if there is no burger menu
-                self.assert_element("#menu a[href=\"index.html\"]")
-                self.assert_element("#menu a[href=\"products.html\"]")
-                self.assert_element("#menu a[href=\"staff.html\"]")
+                self.assert_element("#menu a[href=\"../EN/products.html\"]")
+                self.assert_element("#menu a[href=\"../EN/index.html\"]")
+                self.assert_element("#menu a[href=\"../EN/staff.html\"]")
             else:
                 # Activates if there is a burger menu
-                self.assert_element("nav a[href=\"index.html\"]")
-                self.assert_element("nav a[href=\"products.html\"]")
-                self.assert_element("nav a[href=\"staff.html\"]")
+                self.assert_element("nav a[href=\"../EN/products.html\"]")
+                self.assert_element("nav a[href=\"../EN/index.html\"]")
+                self.assert_element("nav a[href=\"../EN/staff.html\"]")
 
     def testLogo(self):
         # Find logo in every header
         for i in pages:
             self.open(i)
-            self.assert_element("#header [src=\"../../src/images/svg/logo.svg\"]")
+            self.assert_element("#header [src=\"../src/images/svg/logo.svg\"]")
 
     def testbutton(self):
         for i in range(len(pages)):
@@ -60,7 +60,7 @@ class header(BaseCase):
                 self.click("label", timeout=5)
             except:
                 # Activates if there is no burger menu
-                self.assert_element('#menu a[href=\"../sv/'+pagesSV[i]+'\"]')
+                self.assert_element('#menu a[href=\"../'+pagesSV[i]+'\"]')
             else:
                 # Activates if there is a burger menu
-                self.assert_element('nav a[href=\"../sv/'+pagesSV[i]+'\"]')
+                self.assert_element('nav a[href=\"../'+pagesSV[i]+'\"]')

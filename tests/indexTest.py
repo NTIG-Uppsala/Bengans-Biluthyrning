@@ -3,14 +3,14 @@ import pathlib
 
 # Find file path and prepare formatting, gets file, removes the last 5 characters
 filePath = "file://" + \
-    str(pathlib.Path(__file__).parent.resolve())[:-18].replace("\\", "/")
+    str(pathlib.Path(__file__).parent.resolve())[:-5].replace("\\", "/")
 
-startPage = filePath + "jonkoping/en/index.html"  # Path to english index.html
+startPage = filePath + "index.html"  # Path to index.html
 
 class workingWebsite(BaseCase):
     def testTitle(self):
         self.open(startPage)
-        self.assert_title("Bengan's Car Rentals")
+        self.assert_title("Bengans Biluthyrning")
 
     def testBackground(self):
         self.open(startPage)
@@ -18,9 +18,9 @@ class workingWebsite(BaseCase):
 
     def testSlogan(self):
         self.open(startPage)
-        self.assert_text("Nice Cars")
-        self.assert_text("Nicer Prices")
+        self.assert_text("Bra Bilar")
+        self.assert_text("Bättre Priser")
 
     def testButton(self):
         self.open(startPage)
-        self.assert_element(".main a[href=\"products.html\"]")
+        self.assert_element(".main a[href=\"produkter.html\"]")
